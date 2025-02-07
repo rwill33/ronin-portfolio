@@ -1,3 +1,6 @@
+import { AuroraBackground } from '@/components/ui/aurora-background';
+import { FloatingNav } from '@/components/ui/floating-navbar';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -17,6 +20,12 @@ export const metadata: Metadata = {
   description: `Ronin Williams-Young's portfolio created using Next.js with TypeScript and Tailwind CSS.`,
 };
 
+const navItems = [
+  { name: 'Home', link: '/' },
+  { name: 'Projects', link: '/projects' },
+  { name: 'About', link: '/about' },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +36,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <AuroraBackground className='relative h-screen flex flex-col'>
+            <FloatingNav navItems={navItems} />
+            <main className='flex flex-1 overflow-auto w-full justify-center'>
+              {children}
+            </main>
+          </AuroraBackground>
+        </ThemeProvider>
       </body>
     </html>
   );
