@@ -2,7 +2,6 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { JSX } from 'react';
-import { ModeToggle } from './theme-toggle';
 
 export const FloatingNav = ({
   navItems,
@@ -32,7 +31,6 @@ export const FloatingNav = ({
           </Link>
         )
       )}
-      <ModeToggle />
     </div>
   );
 };
