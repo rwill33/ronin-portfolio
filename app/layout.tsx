@@ -1,6 +1,7 @@
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { ThemeProvider } from '@/components/ui/theme-provider';
+import { ModeToggle } from '@/components/ui/theme-toggle';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
@@ -22,8 +23,10 @@ export const metadata: Metadata = {
 
 const navItems = [
   { name: 'Home', link: '/' },
-  { name: 'Projects', link: '/projects' },
   { name: 'About', link: '/about' },
+  { name: 'Projects', link: '/projects' },
+  { name: 'Personal', link: '/personal' },
+  { name: 'Contact', link: '/contact' },
 ];
 
 export default function RootLayout({
@@ -47,6 +50,9 @@ export default function RootLayout({
             <main className='flex flex-1 overflow-auto w-full justify-center'>
               {children}
             </main>
+            <div className='absolute bottom-0 right-0 p-4'>
+              <ModeToggle />
+            </div>
           </AuroraBackground>
         </ThemeProvider>
       </body>
