@@ -2,32 +2,34 @@
 
 import { cn } from '@/lib/utils';
 // import { IconBrandYoutubeFilled } from '@tabler/icons-react';
-import React from 'react';
+import React, { useState } from 'react';
+import { Card } from './ui/focus-cards';
 
 export function FeaturesSectionDemo() {
+  const [hovered, setHovered] = useState<number | null>(null);
   const features = [
     {
-      title: 'Track issues effectively',
+      title: 'PhilanthPro',
       description:
         'Track and manage your project issues with ease using our intuitive interface.',
-      skeleton: <SkeletonOne />,
+      skeleton: <SkeletonOne hovered={hovered} setHovered={setHovered} />,
       className:
-        'col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800',
+        'col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-400',
     },
     {
-      title: 'Capture pictures with AI',
+      title: 'ProWire',
       description:
         'Capture stunning photos effortlessly using our advanced AI technology.',
-      skeleton: <SkeletonTwo />,
-      className: 'border-b col-span-1 lg:col-span-2 dark:border-neutral-800',
+      skeleton: <SkeletonTwo hovered={hovered} setHovered={setHovered} />,
+      className: 'border-b col-span-1 lg:col-span-2 dark:border-neutral-400',
     },
     {
-      title: 'Watch our AI on YouTube',
+      title: 'Course Outline Manager',
       description:
         'Whether its you or Tyler Durden, you can get to know about our product on YouTube',
-      skeleton: <SkeletonThree />,
+      skeleton: <SkeletonThree hovered={hovered} setHovered={setHovered} />,
       className:
-        'col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800',
+        'col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-400',
     },
     {
       title: 'Deploy in seconds',
@@ -37,26 +39,30 @@ export function FeaturesSectionDemo() {
       className: 'col-span-1 lg:col-span-3 border-b lg:border-none',
     },
   ];
+
   return (
-    <div className='relative z-20 py-10 lg:py-40 max-w-7xl mx-auto'>
+    <div className='relative z-20 max-w-7xl mx-auto '>
       <div className='px-8'>
         <h4 className='text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white'>
-          Packed with thousands of features
+          Past Projects
         </h4>
 
         <p className='text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300'>
-          From Image generation to video generation, Everything AI has APIs for
-          literally everything. It can even create this website copy for you.
+          Here are some of the projects I have worked on in the past. I am
+          always looking for new projects to work on, so feel free to reach out
+          to me if you have a project in mind.
         </p>
       </div>
 
-      <div className='relative '>
-        <div className='grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800'>
+      <div className='relative bg-opacity-40 dark:bg-opacity-50 bg-indigo-200 dark:bg-neutral-950 '>
+        <div className='grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-400'>
           {features.map((feature) => (
             <FeatureCard key={feature.title} className={feature.className}>
               <FeatureTitle>{feature.title}</FeatureTitle>
               <FeatureDescription>{feature.description}</FeatureDescription>
-              <div className=' h-full w-full'>{feature.skeleton}</div>
+              <div className=' h-full w-full rounded-lg'>
+                {feature.skeleton}
+              </div>
             </FeatureCard>
           ))}
         </div>
@@ -101,16 +107,88 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   );
 };
 
-export const SkeletonOne = () => {
-  return <div className='relative flex py-8 px-2 gap-10 h-full'></div>;
+export const SkeletonOne = ({
+  hovered,
+  setHovered,
+}: {
+  hovered: number | null;
+  setHovered: React.Dispatch<React.SetStateAction<number | null>>;
+}) => {
+  return (
+    <div className='relative flex gap-10'>
+      <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
+        <div className='flex flex-1 w-full h-full flex-col space-y-2'>
+          <Card
+            card={{
+              title: 'PhilanthPro',
+              src: '/philanthpro-dashboard.jpeg',
+              href: 'https://www.philanthpro.com/',
+            }}
+            index={0}
+            hovered={hovered}
+            setHovered={setHovered}
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export const SkeletonThree = () => {
-  return <div></div>;
+export const SkeletonThree = ({
+  hovered,
+  setHovered,
+}: {
+  hovered: number | null;
+  setHovered: React.Dispatch<React.SetStateAction<number | null>>;
+}) => {
+  return (
+    <div className='relative flex gap-10'>
+      <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
+        <div className='flex flex-1 w-full h-full flex-col space-y-2'>
+          <video
+            className={cn(
+              'rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out',
+              hovered !== null && hovered !== 2 && 'blur-sm scale-[0.98]'
+            )}
+            onMouseEnter={() => setHovered(2)}
+            onMouseLeave={() => setHovered(null)}
+            controls
+            preload='auto'
+          >
+            <source src='/course-outline-manager-demo.mp4' type='video/mp4' />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export const SkeletonTwo = () => {
-  return <div></div>;
+export const SkeletonTwo = ({
+  hovered,
+  setHovered,
+}: {
+  hovered: number | null;
+  setHovered: React.Dispatch<React.SetStateAction<number | null>>;
+}) => {
+  return (
+    <div className='relative flex gap-10'>
+      <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
+        <div className='flex flex-1 w-full h-full flex-col space-y-2'>
+          <Card
+            card={{
+              title: 'ProWire',
+              src: '/prowire-logo.png',
+              href: 'https://www.prowiresport.com/',
+            }}
+            index={1}
+            hovered={hovered}
+            setHovered={setHovered}
+          />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export const SkeletonFour = () => {

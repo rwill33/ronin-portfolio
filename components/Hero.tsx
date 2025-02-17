@@ -2,6 +2,7 @@
 import Headshot from '@/public/headshot-sketch.jpeg';
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { TypewriterEffectSmooth } from './ui/typewriter-effect';
 
 const Hero = () => {
@@ -46,12 +47,17 @@ const Hero = () => {
       <div className='font-extralight text-base md:text-3xl text-zinc-800 dark:text-neutral-200 py-4'>
         Aspiring Leader and Software Developer
       </div>
-      <button className='relative inline-flex h-16 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'>
+      <Link
+        href={'/about'}
+        className={
+          'relative inline-flex h-16 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50'
+        }
+      >
         <span className='absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]' />
         <span className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-10 py-1 text-md font-medium text-white backdrop-blur-3xl'>
           Learn More About Me
         </span>
-      </button>
+      </Link>
     </motion.div>
   );
 };
