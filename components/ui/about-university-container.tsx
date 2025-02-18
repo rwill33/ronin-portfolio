@@ -18,7 +18,7 @@ const AboutUniversityContainer = ({
   return (
     <div>
       <div className='flex gap-4 mb-12'>
-        <div className='relative shrink-0 w-24 h-24 justify-self-start'>
+        <div className='hidden sm:block relative shrink-0 h-12 w-12 sm:w-24 sm:h-24 justify-self-start'>
           <Image
             src={image}
             alt={altText}
@@ -27,7 +27,7 @@ const AboutUniversityContainer = ({
           />
         </div>
         <div className='flex flex-col gap-2'>
-          <h3 className='col-span-2 text-2xl font-bold text-neutral-900 dark:text-neutral-100'>
+          <h3 className='col-span-2 text-lg sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100'>
             {title}
           </h3>
           <p className=' font-bold text-neutral-800 dark:text-neutral-400 text-md'>

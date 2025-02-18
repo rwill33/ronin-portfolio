@@ -8,6 +8,28 @@ import UltimateFrisbee from '@/public/ultimate-frisbee.jpg';
 import WesternLogo from '@/public/western-logo.png';
 import WDSLogo from '@/public/western_dev_society_logo.jpeg';
 import Image from 'next/image';
+import {
+  FaAws,
+  FaGitAlt,
+  FaJava,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+} from 'react-icons/fa';
+import { PiFileSql } from 'react-icons/pi';
+import {
+  SiCss3,
+  SiDocker,
+  SiHtml5,
+  SiNestjs,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPython,
+  SiTailwindcss,
+  SiTerraform,
+  SiTypescript,
+} from 'react-icons/si';
+import { VscAzure } from 'react-icons/vsc';
 import AboutUniversityContainer from './ui/about-university-container';
 import { Timeline } from './ui/timeline';
 
@@ -176,35 +198,150 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className='flex flex-1'>
-      <div className='grid grid-cols-4'>
-        <div className='col-span-3 flex flex-1 overflow-hidden'>
-          <div className='flex-1 overflow-y-scroll px-16 pb-8'>
+    <div className='relative flex flex-1 '>
+      <div className='min-h-screen grid grid-cols-1 xl:grid-cols-4 px-4 sm:px-16'>
+        <div className='col-span-1 xl:col-span-3'>
+          <div className='sm:px-16 pb-8'>
             <Timeline data={data} />
           </div>
         </div>
-        <div className='col-span-1 flex flex-col gap-6 p-8 bg-gray-100 dark:bg-neutral-800'>
-          <button
-            className='w-full py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700 transition'
-            onClick={() => window.open('/resume.pdf', '_blank')}
-          >
-            Download Resume
-          </button>
-          <button
-            className='w-full py-2 px-4 bg-green-600 text-white rounded hover:bg-green-700 transition'
-            onClick={() => (window.location.href = '/projects')}
-          >
-            View Projects
-          </button>
-          <div className='mt-8'>
-            <h3 className='text-xl font-bold mb-2'>About Me</h3>
-            <p className='text-sm text-neutral-700 dark:text-neutral-300'>
-              Passionate software engineer with a knack for solving problems and
-              building robust web applications. With a background in both
-              technology and business, I strive to deliver creative and scalable
-              solutions. Explore my projects, download my resume, and connect
-              with me to learn more!
-            </p>
+        <div className='col-span-1'>
+          <div className='sm:px-16 xl:px-0 pb-8'>
+            <div className='dark:bg-neutral-950 dark:bg-opacity-50 rounded-lg p-4'>
+              <h4 className='text-xl font-semibold text-neutral-900 dark:text-neutral-100'>
+                Top Skills
+              </h4>
+              <div className='grid grid-cols-3 gap-4 mt-4'>
+                <div className='flex flex-col items-center'>
+                  <FaReact className='text-4xl text-blue-400' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    React
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiTypescript className='text-4xl text-blue-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    TypeScript
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiNextdotjs className='text-4xl text-black dark:text-white' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Next.js
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiNestjs className='text-4xl text-rose-600' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    NestJS
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <FaNodeJs className='text-4xl text-green-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Node.js
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <FaJs className='text-4xl text-yellow-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    JavaScript
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiTailwindcss className='text-4xl text-sky-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Tailwind CSS
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <FaAws className='text-4xl text-orange-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    AWS
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <FaJava className='text-4xl text-red-600' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Java
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiPython className='text-4xl text-blue-400' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Python
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiHtml5 className='text-4xl text-orange-600' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    HTML5
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiCss3 className='text-4xl text-blue-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    CSS3
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiDocker className='text-4xl text-blue-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Docker
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiTerraform className='text-4xl text-purple-800' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Terraform
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <PiFileSql className='text-4xl text-blue-600' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    SQL
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <SiPostgresql className='text-4xl text-blue-600' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    PostgresSQL
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <FaGitAlt className='text-4xl text-orange-600' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Git
+                  </span>
+                </div>
+                <div className='flex flex-col items-center'>
+                  <VscAzure className='text-4xl text-sky-500' />
+                  <span className='mt-1 text-sm text-neutral-900 dark:text-neutral-100'>
+                    Azure
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* <div className='mt-4'>
+              <h4 className='text-xl font-semibold text-neutral-900 dark:text-neutral-100'>
+                Other Skills
+              </h4>
+              <ul className='mt-2 space-y-1'>
+                <li className='text-sm text-neutral-900 dark:text-neutral-100'>
+                  GraphQL
+                </li>
+                <li className='text-sm text-neutral-900 dark:text-neutral-100'>
+                  Vite
+                </li>
+                <li className='text-sm text-neutral-900 dark:text-neutral-100'>
+                  Material UI
+                </li>
+                <li className='text-sm text-neutral-900 dark:text-neutral-100'>
+                  Agile Methodologies
+                </li>
+              </ul>
+            </div> */}
           </div>
         </div>
       </div>

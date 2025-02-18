@@ -1,7 +1,7 @@
-import { TimelineDemo } from '@/components/About';
+import { About } from '@/components/About';
 
 const AboutPage = () => {
-  return <TimelineDemo />;
+  return <About />;
 };
 
 export default AboutPage;

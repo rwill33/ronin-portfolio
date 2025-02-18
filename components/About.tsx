@@ -1,195 +1,13 @@
-'use client';
-
 import Headshot from '@/public/1723690818171.jpeg';
-import IntelliwareLogo from '@/public/intelliware-logo.png';
-import IntelliwareWork from '@/public/intelliware-work.jpg';
-import IveyLogo from '@/public/ivey-logo.png';
-import ITCLogo from '@/public/ivey_tech_club_logo.jpeg';
-import UltimateFrisbee from '@/public/ultimate-frisbee.jpg';
-import WesternLogo from '@/public/western-logo.png';
-import WDSLogo from '@/public/western_dev_society_logo.jpeg';
-import { motion } from 'motion/react';
+import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import Image from 'next/image';
-import AboutUniversityContainer from './ui/about-university-container';
-import { Timeline } from './ui/timeline';
 
-export function TimelineDemo() {
-  const data = [
-    {
-      title: 'Education',
-      content: (
-        <div className='flex gap-16 flex-col'>
-          <AboutUniversityContainer
-            image={WesternLogo}
-            title='Software Engineering at the University of Western Ontario'
-            altText='Western Engineering Logo'
-            date='2020 - Present'
-            description={[
-              `Awards: Western Scholarship of Distinction, Dean's Honour List (2020-2023)`,
-              `Activities and Societies: Western Engineering Competition (WEC), Western Developer's Society`,
-            ]}
-          />
-          <AboutUniversityContainer
-            image={IveyLogo}
-            title='HBA at Ivey Business School'
-            altText='Ivey Business School Logo'
-            date='2024 - Present'
-            description={[
-              `Activities and Societies: Western Engineering Competition (WEC), Western Developer's Society`,
-            ]}
-          />
-        </div>
-      ),
-    },
-    // {
-    //   title: '2020',
-    //   content: (
-    //     <div>
-    //       <h3 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-8'>
-    //         Engineering at the University of Western Ontario
-    //       </h3>
-    //       <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
-    //         Began my Engineering journey at Western University in London,
-    //         Ontario.
-    //       </p>
-    //       <div className='grid grid-cols-2 gap-4'>
-    //         <Image
-    //           src={WesternEngineering}
-    //           alt='Western Engineering Logo'
-    //           width={500}
-    //           height={500}
-    //           className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
-    //         />
-    //         <Image
-    //           src={WesternUniversity}
-    //           alt='Western University Campus'
-    //           width={500}
-    //           height={500}
-    //           className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
-    //         />
-    //       </div>
-    //     </div>
-    //   ),
-    // },
-    {
-      title: 'Work Experience',
-      content: (
-        <div>
-          <AboutUniversityContainer
-            image={IntelliwareLogo}
-            title='Software Developer Intern at Electric Mind (Previously Intelliware)'
-            altText='Intelliware Logo'
-            date='May 2022 - Aug 2022 & May 2023 - Aug 2024'
-            description={[]}
-          />
-          <h5 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-8'>
-            4 Month Internship
-          </h5>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
-            I initially joined Intelliware as a Software Developer Intern during
-            the summer of 2022. As part of a small team, I worked on developing
-            enterprise software for a client in the real estate industry. I
-            quickly gained a strong foundation in web development and the
-            software development lifecycle while working with React, NestJS, and
-            PostgreSQL. I also learned how to work in an Agile environment,
-            collaborating with team members to deliver high-quality software
-            efficiently.
-          </p>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
-            Early on, I focused on building frontend screens and components, and
-            later, I transitioned to working on the backend API. I adapted the
-            Material UI component library and built out most of the frontend
-            screens, ensuring a consistent and reusable design system. By
-            structuring the library for reusability, I accelerated the
-            development of new pages, improving efficiency as the project
-            progressed. Additionally, I integrated these components with backend
-            CRUD operations using GraphQL, streamlining data retrieval and
-            updates.
-          </p>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mt-8 mb-8'>
-            Also joined the Ultimate Frisbee team!
-          </p>
-          <div className='grid grid-cols-2 gap-4 mb-8'>
-            <Image
-              src={IntelliwareWork}
-              alt='Work at Intelliware'
-              width={500}
-              height={500}
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
-            />
-            <Image
-              src={UltimateFrisbee}
-              alt='hero template'
-              width={500}
-              height={500}
-              className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
-            />
-          </div>
-          <h5 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-8'>
-            16 Month Internship
-          </h5>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
-            After completing my third year of software engineering, I decided to
-            return to Intelliware for a 16-month internship. During this term, I
-            worked on 2 main projects; a fintech application for a client
-            launching a startup and a web adaptation of a mobile application for
-            a client in the sports and entertainment industry.
-          </p>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
-            My role on the fintech project was to develop a web application that
-            would help financial advisors and their clients to manage their
-            charitable foundations. I was the sole developer at the start of the
-            project, leading the initial setup, including choosing the tech
-            stack, configuring the development environment, and establishing
-            best practices. I worked closely with the client to gather technical
-            requirements and conducted research to assess which components could
-            be procured and which should be developed in-house. I developed the
-            frontend using React, Vite, and Material UI, and the backend using
-            NestJS, Prisma and PostgreSQL. I also integrated the application
-            with third-party APIs for payment processing (Stripe),
-            authentication and authorization (Auth0), and document management
-            (Azure).
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: 'Extra Curriculars',
-      content: (
-        <div>
-          <AboutUniversityContainer
-            image={ITCLogo}
-            title='Section 6 Rep for the Ivey Tech Club'
-            altText='ITC Logo'
-            date='2024 - Present'
-            description={[]}
-          />
-          <AboutUniversityContainer
-            image={WDSLogo}
-            title='Tech Lead for the Western Developer Society'
-            altText='WDS Logo'
-            date='Sept 2022 - May 2023'
-            description={[
-              `As a Tech Lead, I supervised the development of all pro-bono web development projects across the Western Developers Society. I taught various tools and frameworks such as git, css, and react, providing developers with a solid web development foundation. From 1-on-1 mentoring to hosting club-wide educational workshops, I empowered developers throughout the club to meaningfully contribute to client projects. I additionally contributed to developing the WDS club website, as well as ad-hoc development for client projects.`,
-            ]}
-          />
-        </div>
-      ),
-    },
-  ];
+export function About() {
   return (
-    <div className='flex flex-1'>
-      <div className='grid grid-cols-4'>
+    <div className='relative '>
+      <div className='grid grid-cols-4 p-12'>
         <div className='col-span-1'>
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1,
-              scale: { type: 'spring', visualDuration: 0.4, bounce: 0 },
-            }}
-            className='flex flex-col items-center px-4 md:px-16 gap-4'
-          >
+          <div className='flex flex-col items-center gap-4'>
             <Image
               width={250}
               height={250}
@@ -197,22 +15,97 @@ export function TimelineDemo() {
               alt='About Me'
               className='rounded-md mb-4'
             />
-
-            <h1 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100'>
-              Ronin Williams-Young
-            </h1>
-            <p className='text-md text-neutral-800 dark:text-neutral-200'>
-              Hi, I&apos;m Ronin and I have deep interest in both business and
-              technology. I have almost 2 years of internship experience as a
-              software developer and I enjoy solving difficult problems. Outside
-              of my career, I also enjoy making music and playing sports.
-            </p>
-          </motion.div>
-        </div>
-        <div className='col-span-3 flex flex-1 overflow-hidden'>
-          <div className='flex-1 overflow-y-scroll pr-16 pb-8'>
-            <Timeline data={data} />
+            <div className='flex flex-col items-center gap-2'>
+              <h2 className='text-xl lg:text-2xl font-bold text-neutral-800 dark:text-neutral-100'>
+                Ronin Williams-Young
+              </h2>
+              <p className='text-base text-neutral-600 dark:text-neutral-300'>
+                Toronto, Ontario, Canada
+              </p>
+              <p className='text-base text-neutral-600 dark:text-neutral-300'>
+                <a
+                  href='mailto:ronin@williams-young.com'
+                  className='hover:underline'
+                >
+                  ronin@williams-young.com
+                </a>{' '}
+                | (647) 570-2191
+              </p>
+            </div>
+            <div className='flex flex-col items-center mt-4'>
+              {/* <h4 className='text-xl font-semibold text-neutral-500 dark:text-neutral-100'>
+                Connect with Me
+              </h4> */}
+              <div className='flex gap-4 mt-2'>
+                <a
+                  href='https://www.linkedin.com/in/ronin-williams-young/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <LinkedinIcon className='text-4xl text-blue-600 dark:text-blue-400' />
+                </a>
+                <a
+                  href='https://github.com/rwill33'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  <GithubIcon className='text-4xl text-gray-800 dark:text-gray-100' />
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
+        <div className='col-span-3 px-16'>
+          <h3 className='hidden md:block text-xl mb-4 md:text-5xl font-bold text-neutral-500 dark:text-neutral-100'>
+            About Me
+          </h3>
+          <div className='w-full border-t-2 border-neutral-100 mb-8' />
+          <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+            Hi, I&apos;m Ronin!
+          </p>
+          <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+            I am currently in my 4th year of studies as a student in Software
+            Engineering and Ivey HBA at Western University. I&apos;ve also had
+            the chance to apply my skills during a 4-month and 16-month
+            internship, where I worked on full-stack development projects using
+            tools like React, Java, SQL, and AWS.
+          </p>
+          <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+            From a young age, I was captivated by the idea of building things.
+            Whether it was assembling LEGO sets without instructions or
+            tinkering with computers, I loved figuring out how things worked and
+            how I could make them better. This curiosity eventually led me to
+            programming, where I enjoyed the challenge of solving complex
+            problems and the satisfaction of seeing my code come to life. That
+            fascination sparked my decision to pursue software engineering where
+            I have learned to create optimized, secure, and scalable solutions.
+          </p>
+          <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+            Throughout my software development journey, I became increasingly
+            interested in the intersection of technology and business,
+            particularly how businesses can leverage technology to drive growth
+            and solve problems. That curiosity led me to the Ivey Business
+            School, where I am now pursuing a dual degree in business and
+            software engineering. My goal is to combine the technical expertise
+            I&apos;ve gained with the strategic thinking and clear communication
+            skills I am developing to create solutions that bridge the gap
+            between technology and business.
+          </p>
+          <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+            Looking ahead, I&apos;m excited to build a career where I can create
+            innovative tools, systems, and strategies that help organizations
+            solve complex challenges and grow in a rapidly evolving digital
+            world. If this resonates with you, let&apos;s connect—I&apos;d love
+            to share more about my journey and hear about yours!
+          </p>
+          {/* <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+            Outside of my career, I also enjoy making music and playing sports.
+            I love to play drums, guitar and piano, as well as produce music,
+            where I have over 14,000 streams on SoundCloud. I also enjoy playing
+            softball at my local park where I volunteered for many years and
+            volleyball at Ashbridges bay where I have a team with friends that I
+            organize.
+          </p> */}
         </div>
       </div>
     </div>

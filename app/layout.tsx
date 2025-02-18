@@ -46,9 +46,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AuroraBackground className='relative h-screen flex flex-col'>
+          <AuroraBackground className='relative flex flex-col'>
             <FloatingNav navItems={navItems} />
-            <main className='flex flex-1 overflow-auto w-full justify-center'>
+            <main className='flex flex-1 w-full justify-center'>
               {children}
             </main>
             <div className='absolute bottom-0 right-0 p-4'>
