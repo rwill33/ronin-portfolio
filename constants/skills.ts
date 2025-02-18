@@ -1,3 +1,4 @@
+import { Skill, SkillKey } from '@/types/skills';
 import {
   FaAws,
   FaGitAlt,
@@ -6,7 +7,6 @@ import {
   FaNodeJs,
   FaReact,
 } from 'react-icons/fa';
-import { IconType } from 'react-icons/lib';
 import { PiFileSql } from 'react-icons/pi';
 import {
   SiCss3,
@@ -21,33 +21,6 @@ import {
   SiTypescript,
 } from 'react-icons/si';
 import { VscAzure } from 'react-icons/vsc';
-
-export interface Skill {
-  icon: IconType;
-  color: string;
-  name: string;
-}
-
-export enum SkillKey {
-  react = 'react',
-  typescript = 'typescript',
-  nextjs = 'nextjs',
-  nestjs = 'nestjs',
-  nodejs = 'nodejs',
-  javascript = 'javascript',
-  tailwindcss = 'tailwindcss',
-  aws = 'aws',
-  java = 'java',
-  python = 'python',
-  html5 = 'html5',
-  css3 = 'css3',
-  docker = 'docker',
-  terraform = 'terraform',
-  sql = 'sql',
-  postgresql = 'postgresql',
-  git = 'git',
-  azure = 'azure',
-}
 
 export const skills: Record<SkillKey, Skill> = {
   react: {

@@ -1,4 +1,5 @@
-import { SkillKey, skills } from '../skills';
+import { skills } from '@/constants/skills';
+import { SkillKey } from '@/types/skills';
 
 const topSkills: SkillKey[] = [
   SkillKey.react,
