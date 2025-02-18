@@ -28,7 +28,28 @@ export interface Skill {
   name: string;
 }
 
-export const skills: Record<string, Skill> = {
+export enum SkillKey {
+  react = 'react',
+  typescript = 'typescript',
+  nextjs = 'nextjs',
+  nestjs = 'nestjs',
+  nodejs = 'nodejs',
+  javascript = 'javascript',
+  tailwindcss = 'tailwindcss',
+  aws = 'aws',
+  java = 'java',
+  python = 'python',
+  html5 = 'html5',
+  css3 = 'css3',
+  docker = 'docker',
+  terraform = 'terraform',
+  sql = 'sql',
+  postgresql = 'postgresql',
+  git = 'git',
+  azure = 'azure',
+}
+
+export const skills: Record<SkillKey, Skill> = {
   react: {
     icon: FaReact,
     color: 'text-blue-400',

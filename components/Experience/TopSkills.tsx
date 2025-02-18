@@ -1,24 +1,24 @@
-import { skills } from '../skills';
+import { SkillKey, skills } from '../skills';
 
-const topSkills = [
-  'react',
-  'typescript',
-  'nextjs',
-  'nestjs',
-  'nodejs',
-  'javascript',
-  'tailwindcss',
-  'aws',
-  'java',
-  'python',
-  'html5',
-  'css3',
-  'docker',
-  'terraform',
-  'sql',
-  'postgresSQL',
-  'git',
-  'azure',
+const topSkills: SkillKey[] = [
+  SkillKey.react,
+  SkillKey.typescript,
+  SkillKey.nextjs,
+  SkillKey.nestjs,
+  SkillKey.nodejs,
+  SkillKey.javascript,
+  SkillKey.tailwindcss,
+  SkillKey.aws,
+  SkillKey.java,
+  SkillKey.python,
+  SkillKey.html5,
+  SkillKey.css3,
+  SkillKey.docker,
+  SkillKey.terraform,
+  SkillKey.sql,
+  SkillKey.postgresql,
+  SkillKey.git,
+  SkillKey.azure,
 ];
 
 const TopSkills = () => {

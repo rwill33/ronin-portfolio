@@ -1,7 +1,7 @@
-import { TimelineDemo } from '@/components/Experience/Experience';
+import { Experience } from '@/components/Experience/Experience';
 
 const AboutPage = () => {
-  return <TimelineDemo />;
+  return <Experience />;
 };
 
 export default AboutPage;

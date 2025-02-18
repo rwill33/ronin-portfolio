@@ -10,7 +10,7 @@ import AboutUniversityContainer from '../ui/about-university-container';
 import { Timeline } from '../ui/timeline';
 import TopSkills from './TopSkills';
 
-export function TimelineDemo() {
+export function Experience() {
   const data = [
     {
       title: 'Education',
