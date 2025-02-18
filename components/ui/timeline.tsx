@@ -32,15 +32,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       className='w-full bg-indigo-100 dark:bg-neutral-950 bg-opacity-90 dark:bg-opacity-50 font-sans md:px-10 rounded-lg'
       ref={containerRef}
     >
-      <div className='max-w-7xl mx-auto pt-8 sm:pt-20 px-8 md:px-8 lg:px-10'>
-        <h2 className='text-4xl md:text-5xl mb-4 text-black font-bold dark:text-white max-w-4xl'>
-          Experience
-        </h2>
-        <p className='text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm'>
-          A brief overview of my professional journey so far.
-        </p>
-      </div>
-
       <div ref={ref} className='relative max-w-7xl mx-auto pb-20'>
         {data.map((item, index) => (
           <div

@@ -198,10 +198,20 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className='relative flex flex-1 '>
-      <div className='min-h-screen grid grid-cols-1 xl:grid-cols-4 px-4 sm:px-16'>
+    <div className='relative max-w-7xl mx-auto'>
+      <div className='px-8'>
+        <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'>
+          Experience
+        </h2>
+        <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-500 font-normal dark:text-neutral-300'>
+          Here are a few of my past personal and professsional projects. I am
+          continuously working on new projects so feel free to contact me to see
+          what I am currently working on.
+        </p>
+      </div>
+      <div className='min-h-screen grid grid-cols-1 gap-16 xl:grid-cols-4 px-4 sm:px-8 py-8'>
         <div className='col-span-1 xl:col-span-3'>
-          <div className='sm:px-16 pb-8'>
+          <div className='pb-8'>
             <Timeline data={data} />
           </div>
         </div>
