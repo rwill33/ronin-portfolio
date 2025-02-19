@@ -9,7 +9,7 @@ export function About() {
         <div className='grid gap-y-8 grid-cols-1 md:grid-cols-4'>
           <div className='col-span-1'>
             <div className='flex flex-col items-center gap-4'>
-              <div className='relative w-full max-w-64 aspect-square rounded-md mb-4'>
+              <div className='relative w-full max-w-32 sm:max-w-64 aspect-square rounded-md mb-4'>
                 <Image
                   src={Headshot}
                   fill

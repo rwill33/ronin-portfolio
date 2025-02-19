@@ -141,51 +141,50 @@ export function FeaturesSectionDemo() {
         <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'>
           Projects
         </h2>
-        <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-500 font-normal dark:text-neutral-300'>
+        <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-800 font-normal dark:text-neutral-300'>
           Here are a few of my past personal and professsional projects.
           I&apos;m always building something new, so feel free to reach out to
           see what I&apos;m currently working on!
         </p>
-      </div>
 
-      <div className='relative bg-opacity-40 dark:bg-opacity-0 bg-indigo-200 dark:bg-neutral-950 '>
-        <div className='grid grid-cols-1 lg:grid-cols-6 rounded-md'>
-          {features.map((feature, index) => (
-            <FeatureCard key={feature.title} className={feature.className}>
-              <FeatureTitle>{feature.title}</FeatureTitle>
-
-              <div className=' h-full w-full rounded-lg my-4'>
-                <div className='relative flex gap-10'>
-                  <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
-                    <div className='flex flex-1 w-full h-full flex-col space-y-2 '>
-                      <feature.skeleton index={index} />
+        <div className='relative'>
+          <div className='grid grid-cols-1 lg:grid-cols-6 rounded-md gap-y-8'>
+            {features.map((feature, index) => (
+              <FeatureCard key={feature.title} className={feature.className}>
+                <FeatureTitle>{feature.title}</FeatureTitle>
+                <div className=' h-full w-full rounded-lg my-4'>
+                  <div className='relative flex gap-10'>
+                    <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
+                      <div className='flex flex-1 w-full h-full flex-col space-y-2 '>
+                        <feature.skeleton index={index} />
+                      </div>
+                    </div>
+                  </div>
+                  <FeatureDescription>{feature.description}</FeatureDescription>
+                  <div className=''>
+                    <h5 className='text-black dark:text-white font-semibold mt-4'>
+                      Technologies
+                    </h5>
+                    <div className='mt-4 flex flex-wrap gap-4'>
+                      {feature.techStack?.map((key) => {
+                        const skill = skills[key];
+                        return (
+                          <div
+                            key={skill.name}
+                            className='flex items-center gap-2'
+                          >
+                            <skill.icon
+                              className={cn(`text-4xl ${skill.color}`)}
+                            />
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
-                <FeatureDescription>{feature.description}</FeatureDescription>
-                <div className=''>
-                  <h5 className='text-lg text-black dark:text-white font-bold mt-4'>
-                    Technologies
-                  </h5>
-                  <div className='mt-4 flex flex-wrap gap-4'>
-                    {feature.techStack?.map((key) => {
-                      const skill = skills[key];
-                      return (
-                        <div
-                          key={skill.name}
-                          className='flex items-center gap-2'
-                        >
-                          <skill.icon
-                            className={cn(`text-4xl ${skill.color}`)}
-                          />
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            </FeatureCard>
-          ))}
+              </FeatureCard>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -200,7 +199,7 @@ const FeatureCard = ({
   className?: string;
 }) => {
   return (
-    <div className={cn(`p-4 sm:p-8 relative overflow-hidden`, className)}>
+    <div className={cn(`sm:p-8 relative overflow-hidden`, className)}>
       {children}
     </div>
   );
@@ -208,7 +207,7 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <p className=' max-w-5xl mx-auto text-left tracking-tight text-black dark:text-white text-xl md:text-3xl md:leading-snug'>
+    <p className=' max-w-5xl mx-auto text-left tracking-tight font-bold text-black dark:text-white text-xl md:text-3xl md:leading-snug'>
       {children}
     </p>
   );
@@ -219,7 +218,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
     <p
       className={cn(
         'text-sm md:text-base text-left mx-auto',
-        'text-neutral-500 text-center font-normal dark:text-neutral-300',
+        'text-neutral-800 text-center font-normal dark:text-neutral-300',
         'text-left mx-0 my-2'
       )}
     >

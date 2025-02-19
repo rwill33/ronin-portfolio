@@ -15,7 +15,7 @@ const Hero = () => {
         duration: 0.8,
         ease: 'easeInOut',
       }}
-      className='relative flex flex-col gap-4 items-center justify-center px-16 py-8'
+      className='relative flex flex-col gap-4 items-center justify-center py-8'
     >
       <div style={{ borderRadius: '40rem', overflow: 'hidden' }}>
         <Image

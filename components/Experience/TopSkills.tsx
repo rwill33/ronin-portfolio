@@ -28,7 +28,7 @@ const TopSkills = () => {
       <h4 className='text-xl font-semibold text-neutral-900 dark:text-neutral-100'>
         Top Skills
       </h4>
-      <div className='grid grid-cols-3 gap-4 mt-4'>
+      <div className='grid grid-cols-3 xl:grid-cols-3 md:grid-cols-6 gap-4 mt-4'>
         {topSkills.map((key) => {
           const skill = skills[key];
           return (
