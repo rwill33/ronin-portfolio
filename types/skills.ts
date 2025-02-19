@@ -25,4 +25,11 @@ export enum SkillKey {
   postgresql = 'postgresql',
   git = 'git',
   azure = 'azure',
+  prisma = 'prisma',
+  spring = 'spring',
+  googlecloud = 'googlecloud',
+  angular = 'angular',
+  firebase = 'firebase',
+  stripe = 'stripe',
+  auth0 = 'auth0',
 }

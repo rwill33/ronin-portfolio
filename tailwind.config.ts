@@ -86,6 +86,22 @@ export default {
     },
   },
   plugins: [addVariablesForColors, tailwindcssAnimate],
+  safelist: [
+    'text-blue-400',
+    'text-blue-500',
+    'text-black',
+    'text-rose-600',
+    'text-green-500',
+    'text-yellow-500',
+    'text-sky-500',
+    'text-orange-500',
+    'text-red-600',
+    'text-orange-600',
+    'text-purple-800',
+    'text-purple-600',
+    'text-blue-600',
+    'text-white',
+  ],
 } satisfies Config;
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

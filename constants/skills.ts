@@ -9,13 +9,20 @@ import {
 } from 'react-icons/fa';
 import { PiFileSql } from 'react-icons/pi';
 import {
+  SiAngular,
+  SiAuth0,
   SiCss3,
   SiDocker,
+  SiFirebase,
+  SiGooglecloud,
   SiHtml5,
   SiNestjs,
   SiNextdotjs,
   SiPostgresql,
+  SiPrisma,
   SiPython,
+  SiSpring,
+  SiStripe,
   SiTailwindcss,
   SiTerraform,
   SiTypescript,
@@ -112,5 +119,40 @@ export const skills: Record<SkillKey, Skill> = {
     icon: VscAzure,
     color: 'text-sky-500',
     name: 'Azure',
+  },
+  prisma: {
+    icon: SiPrisma,
+    color: 'text-black dark:text-white',
+    name: 'Prisma',
+  },
+  spring: {
+    icon: SiSpring,
+    color: 'text-green-500',
+    name: 'Spring',
+  },
+  googlecloud: {
+    icon: SiGooglecloud,
+    color: 'text-blue-500',
+    name: 'Google Cloud',
+  },
+  angular: {
+    icon: SiAngular,
+    color: 'text-red-600',
+    name: 'Angular',
+  },
+  firebase: {
+    icon: SiFirebase,
+    color: 'text-yellow-500',
+    name: 'Firebase',
+  },
+  stripe: {
+    icon: SiStripe,
+    color: 'text-purple-600',
+    name: 'Stripe',
+  },
+  auth0: {
+    icon: SiAuth0,
+    color: 'text-white dark:text-black',
+    name: 'Auth0',
   },
 };

@@ -1,6 +1,6 @@
 import Headshot from '@/public/1723690818171.jpeg';
-import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import Image from 'next/image';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export function About() {
   return (
@@ -33,23 +33,20 @@ export function About() {
               </p>
             </div>
             <div className='flex flex-col items-center mt-4'>
-              {/* <h4 className='text-xl font-semibold text-neutral-500 dark:text-neutral-100'>
-                Connect with Me
-              </h4> */}
               <div className='flex gap-4 mt-2'>
                 <a
                   href='https://www.linkedin.com/in/ronin-williams-young/'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <LinkedinIcon className='text-4xl text-blue-600 dark:text-blue-400' />
+                  <FaLinkedin className='text-4xl text-blue-600 dark:text-blue-400' />
                 </a>
                 <a
                   href='https://github.com/rwill33'
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <GithubIcon className='text-4xl text-gray-800 dark:text-gray-100' />
+                  <FaGithub className='text-4xl text-gray-800 dark:text-gray-100' />
                 </a>
               </div>
             </div>

@@ -1,11 +1,11 @@
 'use client';
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 
 type Card = {
   title: string;
-  src: string;
+  src: StaticImageData;
   href: string;
 };
 
@@ -27,8 +27,8 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        'rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out',
-        hovered !== null && hovered !== index && 'blur-sm scale-[0.98]'
+        'rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full',
+        hovered !== null && hovered !== index && 'blur-sm'
       )}
     >
       <Image
