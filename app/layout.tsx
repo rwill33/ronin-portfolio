@@ -4,6 +4,10 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import { ModeToggle } from '@/components/ui/theme-toggle';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import { FaHome } from 'react-icons/fa';
+import { GrProjects } from 'react-icons/gr';
+import { IoPersonCircleSharp } from 'react-icons/io5';
+import { MdWork } from 'react-icons/md';
 import './globals.css';
 
 const geistSans = Geist({
@@ -22,12 +26,11 @@ export const metadata: Metadata = {
 };
 
 const navItems = [
-  { name: 'Home', link: '/' },
-  { name: 'About', link: '/about' },
-  { name: 'Experience', link: '/experience' },
-  { name: 'Projects', link: '/projects' },
+  { name: 'Home', link: '/', icon: FaHome },
+  { name: 'About', link: '/about', icon: IoPersonCircleSharp },
+  { name: 'Experience', link: '/experience', icon: MdWork },
+  { name: 'Projects', link: '/projects', icon: GrProjects },
   // { name: 'Personal', link: '/personal' },
-  // { name: 'Contact', link: '/contact' },
 ];
 
 export default function RootLayout({
