@@ -15,7 +15,7 @@ export function Experience() {
     {
       title: 'Education',
       content: (
-        <div className='flex gap-16 flex-col'>
+        <div className='flex gap-8 flex-col'>
           <AboutUniversityContainer
             image={WesternLogo}
             title='Software Engineering at the University of Western Ontario'
@@ -123,7 +123,7 @@ export function Experience() {
     {
       title: 'Extra Curriculars',
       content: (
-        <div>
+        <div className='flex gap-8 flex-col'>
           <AboutUniversityContainer
             image={ITCLogo}
             title='Section 6 Rep for the Ivey Tech Club'

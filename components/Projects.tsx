@@ -25,7 +25,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'PhilanthPro',
       description:
-        'PhilanthPro is a platform that helps non-profits manage their donations and donors. Led initial development, including the setup of the development environment, database schema, and user authentication.',
+        'This project helped advisors and their clients optimize charitable donations by calculating the ideal annual contribution based on factors like timeline, cash flows, inflation, and the time value of money. I implemented authentication and authorization with Auth0, integrated Stripe for subscription management, and contributed to the donation optimization algorithm by improving performance with WebWorkers. Additionally, I built dynamic form pages, implemented data-saving functionality, resolved bugs, and provided client support as the sole developer post-launch, balancing technical troubleshooting with relationship management.',
       skeleton: ({ index }: { index: number }) => (
         <Card
           card={{
@@ -54,7 +54,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'ProWire',
       description:
-        'Converted a native mobile application to a web application for real-time sports audio streaming.',
+        'This web app recreated a lightweight version of the client’s mobile app, enabling users to onboard and stream live sports audio. I adapted the existing audio streaming system for the web using WebRTC and the Web Audio API, solving challenges like enabling playback through iPhone speakers for a seamless experience. Additionally, I extended the Java Spring backend to support the web app without disrupting the original mobile app’s functionality.',
       skeleton: ({ index }: { index: number }) => (
         <Card
           card={{
@@ -80,7 +80,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'Course Outline Manager',
       description:
-        'Whether its you or Tyler Durden, you can get to know about our product on YouTube',
+        'I built a multi-tenant web application for universities to manage course outlines, leading development in an agile environment with sprints, stand-ups, and code reviews. I designed a robust PostgreSQL database with Prisma and deployed the app on GCP using Docker. By practicing Test-Driven Development with Jest for React and NestJS, I improved stability and reduced bugs.',
       skeleton: ({ index }: { index: number }) => (
         <video
           className={cn(
@@ -111,7 +111,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'Spotify Clone',
       description:
-        'A clone of the Spotify platform that allows users to search for songs, create and share playlists, and listen to music through YouTube.',
+        'A clone of the Spotify platform that allows users to search for songs, create and share playlists, and listen to music through YouTube. I implemented the frontend with Angular and TypeScript, integrated Firebase for authentication, and deployed the app on AWS using an EC2 instance.',
       skeleton: ({ index }: { index: number }) => (
         <Card
           card={{
@@ -142,9 +142,9 @@ export function FeaturesSectionDemo() {
           Projects
         </h2>
         <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-500 font-normal dark:text-neutral-300'>
-          Here are a few of my past personal and professsional projects. I am
-          always working on new projects so feel free to contact me to see what
-          I am currently working on.
+          Here are a few of my past personal and professsional projects.
+          I&apos;m always building something new, so feel free to reach out to
+          see what I&apos;m currently working on!
         </p>
       </div>
 
@@ -153,9 +153,8 @@ export function FeaturesSectionDemo() {
           {features.map((feature, index) => (
             <FeatureCard key={feature.title} className={feature.className}>
               <FeatureTitle>{feature.title}</FeatureTitle>
-              <FeatureDescription>{feature.description}</FeatureDescription>
 
-              <div className=' h-full w-full rounded-lg'>
+              <div className=' h-full w-full rounded-lg my-4'>
                 <div className='relative flex gap-10'>
                   <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
                     <div className='flex flex-1 w-full h-full flex-col space-y-2 '>
@@ -163,6 +162,7 @@ export function FeaturesSectionDemo() {
                     </div>
                   </div>
                 </div>
+                <FeatureDescription>{feature.description}</FeatureDescription>
                 <div className=''>
                   <h5 className='text-lg text-black dark:text-white font-bold mt-4'>
                     Technologies
@@ -218,7 +218,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
     <p
       className={cn(
-        'text-sm md:text-base max-w-xl text-left mx-auto',
+        'text-sm md:text-base text-left mx-auto',
         'text-neutral-500 text-center font-normal dark:text-neutral-300',
         'text-left mx-0 my-2'
       )}

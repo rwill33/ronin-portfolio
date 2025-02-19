@@ -17,7 +17,7 @@ const AboutUniversityContainer = ({
 }: AboutUniversityContainerProps) => {
   return (
     <div>
-      <div className='flex gap-4 mb-12'>
+      <div className='flex gap-4 mb-4'>
         <div className='hidden sm:block relative shrink-0 h-12 w-12 sm:w-24 sm:h-24 justify-self-start'>
           <Image
             src={image}

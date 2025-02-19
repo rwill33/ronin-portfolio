@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export function About() {
   return (
-    <div className='relative '>
-      <div className='grid grid-cols-4 p-12'>
+    <div className='relative max-w-7xl mx-auto'>
+      <div className='grid grid-cols-4'>
         <div className='col-span-1'>
           <div className='flex flex-col items-center gap-4'>
             <Image
@@ -53,10 +53,10 @@ export function About() {
           </div>
         </div>
         <div className='col-span-3 px-16'>
-          <h3 className='hidden md:block text-xl mb-4 md:text-5xl font-bold text-neutral-500 dark:text-neutral-100'>
+          <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'>
             About Me
-          </h3>
-          <div className='w-full border-t-2 border-neutral-100 mb-8' />
+          </h2>
+          <div className='w-full border-t-2 border-neutral-900 dark:border-neutral-100 mb-8' />
           <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
             Hi, I&apos;m Ronin!
           </p>
