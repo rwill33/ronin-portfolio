@@ -1,7 +1,6 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-// import { IconBrandYoutubeFilled } from '@tabler/icons-react';
 import { skills } from '@/constants/skills';
 import PhilanthPro from '@/public/philanthpro-dashboard.jpeg';
 import ProWire from '@/public/prowire-logo.png';
@@ -21,6 +20,7 @@ interface Feature {
 
 export function FeaturesSectionDemo() {
   const [hovered, setHovered] = useState<number | null>(null);
+
   const features: Feature[] = [
     {
       title: 'PhilanthPro',
@@ -54,7 +54,7 @@ export function FeaturesSectionDemo() {
     {
       title: 'ProWire',
       description:
-        'This web app recreated a lightweight version of the client’s mobile app, enabling users to onboard and stream live sports audio. I adapted the existing audio streaming system for the web using WebRTC and the Web Audio API, solving challenges like enabling playback through iPhone speakers for a seamless experience. Additionally, I extended the Java Spring backend to support the web app without disrupting the original mobile app’s functionality.',
+        "This web app recreated a lightweight version of the client's mobile app, enabling users to onboard and stream live sports audio. I adapted the existing audio streaming system for the web using WebRTC and the Web Audio API, solving challenges like enabling playback through iPhone speakers for a seamless experience. Additionally, I extended the Java Spring backend to support the web app without disrupting the original mobile app's functionality.",
       skeleton: ({ index }: { index: number }) => (
         <Card
           card={{
@@ -90,7 +90,8 @@ export function FeaturesSectionDemo() {
           onMouseEnter={() => setHovered(index)}
           onMouseLeave={() => setHovered(null)}
           controls
-          preload='auto'
+          preload='metadata'
+          aria-label='Demo video of Course Outline Manager application'
         >
           <source src='/course-outline-manager-demo.mp4' type='video/mp4' />
           Your browser does not support the video tag.
@@ -136,45 +137,60 @@ export function FeaturesSectionDemo() {
   ];
 
   return (
-    <div className='relative max-w-7xl mx-auto'>
+    <section
+      className='relative max-w-7xl mx-auto'
+      aria-labelledby='projects-heading'
+    >
       <div className='px-8'>
-        <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'>
-          Projects
-        </h2>
-        <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-800 font-normal dark:text-neutral-300'>
-          Here are a few of my past personal and professsional projects.
-          I&apos;m always building something new, so feel free to reach out to
-          see what I&apos;m currently working on!
-        </p>
+        <header>
+          <h1
+            id='projects-heading'
+            className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'
+          >
+            Projects
+          </h1>
+          <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-800 font-normal dark:text-neutral-300'>
+            Here are a few of my past personal and professional projects.
+            I&apos;m always building something new, so feel free to reach out to
+            see what I&apos;m currently working on!
+          </p>
+        </header>
 
         <div className='relative'>
           <div className='grid grid-cols-1 lg:grid-cols-6 rounded-md gap-y-8'>
             {features.map((feature, index) => (
               <FeatureCard key={feature.title} className={feature.className}>
                 <FeatureTitle>{feature.title}</FeatureTitle>
-                <div className=' h-full w-full rounded-lg my-4'>
+                <div className='h-full w-full rounded-lg my-4'>
                   <div className='relative flex gap-10'>
-                    <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg'>
-                      <div className='flex flex-1 w-full h-full flex-col space-y-2 '>
+                    <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg overflow-hidden'>
+                      <div className='flex flex-1 w-full h-full flex-col space-y-2'>
                         <feature.skeleton index={index} />
                       </div>
                     </div>
                   </div>
                   <FeatureDescription>{feature.description}</FeatureDescription>
-                  <div className=''>
-                    <h5 className='text-black dark:text-white font-semibold mt-4'>
+                  <div className='mt-4'>
+                    <h3 className='text-black dark:text-white font-semibold mb-2'>
                       Technologies
-                    </h5>
-                    <div className='mt-4 flex flex-wrap gap-4'>
+                    </h3>
+                    <div
+                      className='flex flex-wrap gap-4'
+                      role='list'
+                      aria-label='Technologies used in this project'
+                    >
                       {feature.techStack?.map((key) => {
                         const skill = skills[key];
                         return (
                           <div
                             key={skill.name}
-                            className='flex items-center gap-2'
+                            className='flex items-center gap-2 hover:scale-110 transition-transform duration-200'
+                            role='listitem'
+                            title={skill.name}
                           >
                             <skill.icon
                               className={cn(`text-4xl ${skill.color}`)}
+                              aria-label={`${skill.name} technology icon`}
                             />
                           </div>
                         );
@@ -187,7 +203,7 @@ export function FeaturesSectionDemo() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -199,17 +215,17 @@ const FeatureCard = ({
   className?: string;
 }) => {
   return (
-    <div className={cn(`sm:p-8 relative overflow-hidden`, className)}>
+    <article className={cn(`sm:p-8 relative overflow-hidden`, className)}>
       {children}
-    </div>
+    </article>
   );
 };
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <p className=' max-w-5xl mx-auto text-left tracking-tight font-bold text-black dark:text-white text-xl md:text-3xl md:leading-snug'>
+    <h2 className='max-w-5xl mx-auto text-left tracking-tight font-bold text-black dark:text-white text-xl md:text-3xl md:leading-snug'>
       {children}
-    </p>
+    </h2>
   );
 };
 
@@ -218,7 +234,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
     <p
       className={cn(
         'text-sm md:text-base text-left mx-auto',
-        'text-neutral-800 text-center font-normal dark:text-neutral-300',
+        'text-neutral-800 font-normal dark:text-neutral-300',
         'text-left mx-0 my-2'
       )}
     >
