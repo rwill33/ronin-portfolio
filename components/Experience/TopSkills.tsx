@@ -39,7 +39,7 @@ const TopSkills = () => {
               <skill.icon
                 className={`text-3xl xl:text-4xl ${skill.color} group-hover:scale-110 transition-transform duration-300`}
               />
-              <span className='mt-2 text-xs xl:text-sm text-white/90 text-center font-medium'>
+              <span className='mt-2 text-sm font-medium xl:text-base text-white text-center'>
                 {skill.name}
               </span>
             </div>
