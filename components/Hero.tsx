@@ -25,12 +25,16 @@ const Hero = () => {
               <div className='space-y-6 lg:space-y-8 order-2 lg:order-1'>
                 {/* Main heading */}
                 <div className='space-y-4'>
-                  <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight'>
-                    Hello, I&apos;m{' '}
-                    <span className='bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600 bg-clip-text text-transparent'>
-                      Ronin Williams&#8209;Young
-                    </span>
-                  </h1>
+                  <div>
+                    <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight'>
+                      Hello, I&apos;m{' '}
+                    </h1>
+                    <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
+                      <span className='text-indigo-700 drop-shadow-[0_0_10px_rgba(255,255,255,0.15)] dark:bg-gradient-to-r dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500 dark:bg-clip-text dark:text-transparent dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]'>
+                        Ronin Williams‑Young
+                      </span>
+                    </h1>
+                  </div>
 
                   <p className='text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed'>
                     An experienced Software Engineering and Business student
