@@ -21,19 +21,6 @@ const Hero = () => {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center'>
           {/* Left side - Content */}
           <div className='space-y-8'>
-            {/* Tech stack tags */}
-            <div className='flex flex-wrap gap-3'>
-              <span className='px-4 py-2 bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-full text-sm text-white/90 backdrop-blur-sm'>
-                React
-              </span>
-              <span className='px-4 py-2 bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-full text-sm text-white/90 backdrop-blur-sm'>
-                TypeScript
-              </span>
-              <span className='px-4 py-2 bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 rounded-full text-sm text-white/90 backdrop-blur-sm'>
-                Next.js
-              </span>
-            </div>
-
             {/* Main heading */}
             <div className='space-y-4'>
               <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight'>
@@ -73,40 +60,26 @@ const Hero = () => {
               </button>
             </div>
 
-            {/* Contact info */}
-            <div className='space-y-4 pt-8'>
-              <div className='text-white/70 space-y-2'>
-                <p>Toronto, Ontario, Canada</p>
-                <p>
-                  <a
-                    href='mailto:ronin@williams-young.com'
-                    className='hover:text-white transition-colors duration-200'
-                  >
-                    ronin@williams-young.com
-                  </a>
-                </p>
-              </div>
-
-              <div className='flex gap-4'>
-                <a
-                  href='https://www.linkedin.com/in/ronin-williams-young/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm'
-                  aria-label="Visit Ronin's LinkedIn profile"
-                >
-                  <FaLinkedin className='text-xl text-blue-400' />
-                </a>
-                <a
-                  href='https://github.com/rwill33'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm'
-                  aria-label="Visit Ronin's GitHub profile"
-                >
-                  <FaGithub className='text-xl text-white' />
-                </a>
-              </div>
+            {/* Social media links only */}
+            <div className='flex gap-4 pt-8'>
+              <a
+                href='https://www.linkedin.com/in/ronin-williams-young/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm'
+                aria-label="Visit Ronin's LinkedIn profile"
+              >
+                <FaLinkedin className='text-xl text-blue-400' />
+              </a>
+              <a
+                href='https://github.com/rwill33'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm'
+                aria-label="Visit Ronin's GitHub profile"
+              >
+                <FaGithub className='text-xl text-white' />
+              </a>
             </div>
           </div>
 
@@ -145,6 +118,23 @@ const Hero = () => {
                       Business Student
                     </div>
                   </div>
+                </div>
+              </div>
+
+              {/* Contact info underneath the picture */}
+              <div className='mt-8 text-center space-y-4'>
+                <div className='text-white/70 space-y-2'>
+                  <p className='text-lg font-medium'>
+                    Toronto, Ontario, Canada
+                  </p>
+                  <p>
+                    <a
+                      href='mailto:ronin@williams-young.com'
+                      className='text-blue-200 hover:text-blue-100 transition-colors duration-200'
+                    >
+                      ronin@williams-young.com
+                    </a>
+                  </p>
                 </div>
               </div>
 
