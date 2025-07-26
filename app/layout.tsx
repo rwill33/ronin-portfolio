@@ -1,7 +1,5 @@
 import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FloatingNav } from '@/components/ui/floating-navbar';
-import { ThemeProvider } from '@/components/ui/theme-provider';
-import { ModeToggle } from '@/components/ui/theme-toggle';
 import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
@@ -25,10 +23,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
-  ],
+  themeColor: '#0a0a0a',
 };
 
 export const metadata: Metadata = {
@@ -146,7 +141,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning className='dark'>
       <head>
         <link rel='icon' href='/favicon.ico' sizes='16x16 32x32' />
         <link
@@ -156,12 +151,15 @@ export default function RootLayout({
           type='image/jpeg'
         />
         <link rel='apple-touch-icon' href='/sf_pic3.jpeg' />
-        <meta name='theme-color' content='#ffffff' />
-        <meta name='color-scheme' content='dark light' />
+        <meta name='theme-color' content='#0a0a0a' />
+        <meta name='color-scheme' content='dark' />
         <meta name='format-detection' content='telephone=no' />
         <meta name='mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+        <meta
+          name='apple-mobile-web-app-status-bar-style'
+          content='black-translucent'
+        />
         <meta
           name='apple-mobile-web-app-title'
           content='Ronin Williams-Young'
@@ -281,24 +279,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
-          <AuroraBackground className='relative min-h-screen flex flex-col'>
-            <FloatingNav navItems={navItems} />
-            <main className='flex flex-1 w-full justify-center'>
-              {children}
-            </main>
-            <div className='fixed bottom-4 right-4 z-50'>
-              <ModeToggle />
-            </div>
-          </AuroraBackground>
-        </ThemeProvider>
+        <AuroraBackground className='relative min-h-screen flex flex-col'>
+          <FloatingNav navItems={navItems} />
+          <main className='flex flex-1 w-full justify-center'>{children}</main>
+        </AuroraBackground>
         <Analytics />
       </body>
     </html>
