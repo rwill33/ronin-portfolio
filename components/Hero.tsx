@@ -2,7 +2,7 @@
 import Headshot from '@/public/sf_pic3.jpeg';
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -39,7 +39,8 @@ const Hero = () => {
                 </div>
 
                 {/* Action buttons and social links */}
-                <div className='flex flex-col sm:flex-row gap-4 items-start sm:items-center'>
+                <div className='flex flex-col gap-6'>
+                  {/* Main action buttons */}
                   <div className='flex flex-col sm:flex-row gap-4'>
                     <button
                       onClick={() => {
@@ -51,19 +52,17 @@ const Hero = () => {
                     >
                       View My Work
                     </button>
-                    <button
-                      onClick={() => {
-                        document
-                          .getElementById('projects')
-                          ?.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      className='px-8 py-4 border border-white/30 hover:bg-white/10 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 text-lg backdrop-blur-sm'
+                    <a
+                      href='/Ronin_Williams_Young_Resume.pdf'
+                      download='Ronin_Williams_Young_Resume.pdf'
+                      className='px-8 py-4 border border-white/30 hover:bg-white/10 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 text-lg backdrop-blur-sm text-center'
                     >
-                      See Projects
-                    </button>
+                      Download Resume
+                    </a>
                   </div>
 
-                  <div className='flex gap-4'>
+                  {/* Social contact buttons */}
+                  <div className='flex gap-4 justify-start sm:justify-start'>
                     <a
                       href='https://www.linkedin.com/in/ronin-williams-young/'
                       target='_blank'
@@ -82,25 +81,15 @@ const Hero = () => {
                     >
                       <FaGithub className='text-xl text-white' />
                     </a>
-                  </div>
-                </div>
-
-                {/* Contact info
-              <div className='space-y-2 pt-8'>
-                <div className='text-white/70 space-y-2'>
-                  <p className='text-lg font-medium'>
-                    Toronto, Ontario, Canada
-                  </p>
-                  <p>
                     <a
                       href='mailto:ronin@williams-young.com'
-                      className='text-blue-200 hover:text-blue-100 transition-colors duration-200'
+                      className='p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm'
+                      aria-label='Send email to Ronin'
                     >
-                      ronin@williams-young.com
+                      <FaEnvelope className='text-xl text-green-400' />
                     </a>
-                  </p>
+                  </div>
                 </div>
-              </div> */}
               </div>
 
               {/* Right side - Visual element */}
@@ -130,10 +119,10 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className='flex-shrink-0 pt-8 lg:pt-12 pb-4 lg:pb-8'>
+      <div className='flex-shrink-0 pt-4 xl:pt-12 pb-4 lg:pb-8'>
         <div className='text-center'>
           <div className='text-white/60 text-xs sm:text-sm mb-2'>
-            Scroll to discover
+            Scroll for more
           </div>
           <div className='w-px h-6 sm:h-8 bg-gradient-to-b from-white/60 to-transparent mx-auto'></div>
         </div>
