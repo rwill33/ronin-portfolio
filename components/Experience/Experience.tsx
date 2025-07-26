@@ -20,9 +20,10 @@ export function Experience() {
             image={WesternLogo}
             title='Software Engineering at the University of Western Ontario'
             altText='Western Engineering Logo'
-            date='2020 - Present'
+            date='2020 - Apr 2026'
             description={[
-              `Awards: Western Scholarship of Distinction, Dean's Honour List (2020-2023)`,
+              `Awards: Scholarship of Distinction ($3,500), Dean's Honor's List (2021, 2022, 2023)`,
+              `Courses: Data Structures & Algorithms, Computer Networking, Databases, Operating Systems, Linear Algebra I`,
               `Activities and Societies: Western Engineering Competition (WEC), Western Developer's Society`,
             ]}
           />
@@ -30,9 +31,10 @@ export function Experience() {
             image={IveyLogo}
             title='HBA at Ivey Business School'
             altText='Ivey Business School Logo'
-            date='2024 - Present'
+            date='2024 - Apr 2026'
             description={[
-              `Activities and Societies: Western Engineering Competition (WEC), Western Developer's Society`,
+              `Honours Business Administration, Dual Degree`,
+              `Activities and Societies: Ivey Tech Club (Co-President), Western Developer's Society`,
             ]}
           />
         </div>
@@ -44,14 +46,41 @@ export function Experience() {
         <div>
           <AboutUniversityContainer
             image={IntelliwareLogo}
-            title='Software Developer Intern at Electric Mind (Previously Intelliware)'
-            altText='Intelliware Logo'
-            date='May 2022 - Aug 2022 & May 2023 - Aug 2024'
-            description={[]}
+            title='AI Engineer Intern at Bond Brand Loyalty'
+            altText='Bond Brand Loyalty Logo'
+            date='May 2025 - Present'
+            description={[
+              'Python, OpenAI Models, Google Gemini',
+              'Developed an LLM-powered pipeline to analyze 23K+ unstructured support chat logs, uncovering key customer pain points, analyzing emotional sentiment, and delivering actionable strategic insights',
+              'Built an embedding-based NLP pipeline to cluster 20M+ messy text entries into 30 clean categories, achieving 0.85 average similarity and improving search and analytics usability'
+            ]}
           />
-          <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8'>
-            4 Month Internship
+          <div className='mt-8'>
+            <AboutUniversityContainer
+              image={IntelliwareLogo}
+              title='Software Engineer Intern at Electric Mind (Formerly Intelliware)'
+              altText='Intelliware Logo'
+              date='May 2023 - Aug 2024 & May 2022 - Aug 2022'
+              description={[
+                'React, NestJS, Azure, AWS, Terraform, PostgreSQL, Material UI, Agile',
+              ]}
+            />
+          </div>
+          <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8 mt-8'>
+            16 Month Internship (May 2023 - Aug 2024)
           </h5>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
+            Developed a full-stack web application for a fintech start-up, enabling a $100K pilot launch with a Big Five bank. Led a post-launch client engagement involving frequent client communication and the delivery of 30+ critical fixes.
+          </p>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
+            Designed and deployed a cloud-native application on AWS to support large-scale events, including a professional sports league (71M+ annual attendance) and a national live sports event (34K+ attendees).
+          </p>
+          <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8 mt-8'>
+            4 Month Internship (May 2022 - Aug 2022)
+          </h5>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
+            Built a modular React component library, reducing UI development time and complying with WCAG 2 standards. Developed automated deployment pipelines with caching, cutting release times down to under 5 minutes.
+          </p>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
             I initially joined Intelliware as a Software Developer Intern during
             the summer of 2022. As part of a small team, I worked on developing
@@ -61,17 +90,6 @@ export function Experience() {
             PostgreSQL. I also learned how to work in an Agile environment,
             collaborating with team members to deliver high-quality software
             efficiently.
-          </p>
-          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
-            Early on, I focused on building frontend screens and components, and
-            later, I transitioned to working on the backend API. I adapted the
-            Material UI component library and built out most of the frontend
-            screens, ensuring a consistent and reusable design system. By
-            structuring the library for reusability, I accelerated the
-            development of new pages, improving efficiency as the project
-            progressed. Additionally, I integrated these components with backend
-            CRUD operations using GraphQL, streamlining data retrieval and
-            updates.
           </p>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mt-8 mb-8'>
             Also joined the Ultimate Frisbee team!
@@ -92,9 +110,6 @@ export function Experience() {
               className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
             />
           </div>
-          <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8'>
-            16 Month Internship
-          </h5>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
             After completing my third year of software engineering, I decided to
             return to Intelliware for a 16-month internship. During this term, I
@@ -121,23 +136,37 @@ export function Experience() {
       ),
     },
     {
-      title: 'Extra Curriculars',
+      title: 'Leadership & Extra Curriculars',
       content: (
         <div className='flex gap-8 flex-col'>
           <AboutUniversityContainer
             image={ITCLogo}
-            title='Section 6 Rep for the Ivey Tech Club'
+            title='Co-President for the Ivey Tech Club'
             altText='ITC Logo'
-            date='2024 - Present'
-            description={[]}
+            date='May 2025 - Present'
+            description={[
+              'Defined the club\'s strategic vision and priorities to deliver meaningful programs for 200+ members',
+              'Overseeing operations across seven portfolios and 16 executives to ensure timely execution of club initiatives'
+            ]}
+          />
+          <AboutUniversityContainer
+            image={ITCLogo}
+            title='Section Rep for the Ivey Tech Club'
+            altText='ITC Logo'
+            date='Nov 2024 - Apr 2025'
+            description={[
+              'Served as Section 6 communications lead, managing outreach and promoting club initiatives to over 75 students'
+            ]}
           />
           <AboutUniversityContainer
             image={WDSLogo}
             title='Tech Lead for the Western Developer Society'
             altText='WDS Logo'
-            date='Sept 2022 - May 2023'
+            date='Sep 2022 - May 2023'
             description={[
-              `As a Tech Lead, I supervised the development of all pro-bono web development projects across the Western Developers Society. I taught various tools and frameworks such as git, css, and react, providing developers with a solid web development foundation. From 1-on-1 mentoring to hosting club-wide educational workshops, I empowered developers throughout the club to meaningfully contribute to client projects. I additionally contributed to developing the WDS club website, as well as ad-hoc development for client projects.`,
+              `Mentored 50 developers, offering comprehensive technical guidance and ensuring consistent project progress`,
+              `Boosted registrations by 27% by leading the development team and maintenance of the club's primary website`,
+              `As a Tech Lead, I supervised the development of all pro-bono web development projects across the Western Developers Society. I taught various tools and frameworks such as git, css, and react, providing developers with a solid web development foundation. From 1-on-1 mentoring to hosting club-wide educational workshops, I empowered developers throughout the club to meaningfully contribute to client projects.`,
             ]}
           />
         </div>
