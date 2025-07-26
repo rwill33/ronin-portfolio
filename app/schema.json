@@ -1,0 +1,114 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ronin Williams-Young",
+  "url": "https://williams-young.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/ronin-williams-young/",
+    "https://github.com/rwill33"
+  ],
+  "jobTitle": "AI Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Bond Brand Loyalty",
+    "url": "https://bondbrandloyalty.com"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Western University",
+      "url": "https://www.uwo.ca",
+      "department": "Software Engineering"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Ivey Business School",
+      "url": "https://www.ivey.uwo.ca",
+      "department": "Honours Business Administration"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Toronto",
+    "addressRegion": "Ontario",
+    "addressCountry": "Canada"
+  },
+  "email": "ronin@williams-young.com",
+  "telephone": "+16475702191",
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "React",
+    "TypeScript",
+    "NestJS",
+    "Python",
+    "Full Stack Development",
+    "Fintech",
+    "Data Analytics",
+    "Enterprise Software",
+    "AWS",
+    "Azure",
+    "PostgreSQL",
+    "Docker",
+    "Terraform",
+    "OpenAI",
+    "Natural Language Processing",
+    "Web Development"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Software Engineering",
+      "credentialCategory": "Bachelor's Degree",
+      "educationalLevel": "Undergraduate",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Western University"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Honours Business Administration",
+      "credentialCategory": "Bachelor's Degree",
+      "educationalLevel": "Undergraduate",
+      "recognizedBy": {
+        "@type": "CollegeOrUniversity",
+        "name": "Ivey Business School"
+      }
+    }
+  ],
+  "workExample": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "PhilanthPro",
+      "description": "Fintech application for optimizing charitable donations with Auth0 authentication and Stripe integration",
+      "url": "https://www.philanthpro.com/",
+      "programmingLanguage": ["React", "TypeScript", "NestJS", "PostgreSQL"],
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "ProWire",
+      "description": "Sports technology web application for live audio streaming using WebRTC and Web Audio API",
+      "url": "https://www.prowiresport.com/",
+      "programmingLanguage": ["React", "TypeScript", "Java", "Spring"],
+      "operatingSystem": "Web",
+      "applicationCategory": "EntertainmentApplication"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Course Outline Manager",
+      "description": "Multi-tenant web application for universities to manage course outlines with Test-Driven Development",
+      "programmingLanguage": [
+        "React",
+        "TypeScript",
+        "NestJS",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "operatingSystem": "Web",
+      "applicationCategory": "EducationalApplication"
+    }
+  ]
+}
