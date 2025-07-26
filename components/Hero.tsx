@@ -26,10 +26,10 @@ const Hero = () => {
                 {/* Main heading */}
                 <div className='space-y-4'>
                   <div>
-                    <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight'>
+                    <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight'>
                       Hello, I&apos;m{' '}
                     </h1>
-                    <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
+                    <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight'>
                       <span className='text-indigo-700 drop-shadow-[0_0_10px_rgba(255,255,255,0.15)] dark:bg-gradient-to-r dark:from-indigo-500 dark:via-purple-500 dark:to-pink-500 dark:bg-clip-text dark:text-transparent dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.25)]'>
                         Ronin Williams‑Young
                       </span>
@@ -66,7 +66,7 @@ const Hero = () => {
                   </div>
 
                   {/* Social contact buttons */}
-                  <div className='flex gap-4 justify-start sm:justify-start'>
+                  <div className='flex gap-4 justify-center sm:justify-start'>
                     <a
                       href='https://www.linkedin.com/in/ronin-williams-young/'
                       target='_blank'
