@@ -57,7 +57,7 @@ const Hero = () => {
                     .getElementById('experience')
                     ?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className='px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-lg'
+                className='px-8 py-4 bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/10 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg text-lg backdrop-blur-sm'
               >
                 View My Work
               </button>

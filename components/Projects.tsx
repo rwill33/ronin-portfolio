@@ -138,18 +138,18 @@ export function FeaturesSectionDemo() {
 
   return (
     <section
-      className='relative max-w-7xl mx-auto'
+      className='relative max-w-7xl mx-auto py-16'
       aria-labelledby='projects-heading'
     >
       <div className='px-8'>
-        <header>
+        <header className='text-center mb-16'>
           <h1
             id='projects-heading'
-            className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-white font-bold dark:text-white'
+            className='text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6'
           >
             Projects
           </h1>
-          <p className='text-sm lg:text-base max-w-2xl my-4 text-white/95 font-normal dark:text-neutral-300'>
+          <p className='text-lg lg:text-xl max-w-3xl mx-auto text-white/90 font-light leading-relaxed'>
             Here are a few of my past personal and professional projects.
             I&apos;m always building something new, so feel free to reach out to
             see what I&apos;m currently working on!
@@ -157,25 +157,25 @@ export function FeaturesSectionDemo() {
         </header>
 
         <div className='relative'>
-          <div className='grid grid-cols-1 lg:grid-cols-6 rounded-md gap-y-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-6 rounded-md gap-8 lg:gap-12'>
             {features.map((feature, index) => (
               <FeatureCard key={feature.title} className={feature.className}>
                 <FeatureTitle>{feature.title}</FeatureTitle>
-                <div className='h-full w-full rounded-lg my-4'>
-                  <div className='relative flex gap-10'>
-                    <div className='w-full mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full rounded-lg overflow-hidden'>
-                      <div className='flex flex-1 w-full h-full flex-col space-y-2'>
+                <div className='h-full w-full rounded-2xl my-6 group'>
+                  <div className='relative'>
+                    <div className='w-full mx-auto bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-white/10 shadow-2xl group h-full rounded-2xl overflow-hidden hover:shadow-blue-500/20 transition-all duration-500 hover:scale-[1.02] hover:border-white/20'>
+                      <div className='flex flex-1 w-full h-full flex-col space-y-2 p-1'>
                         <feature.skeleton index={index} />
                       </div>
                     </div>
                   </div>
                   <FeatureDescription>{feature.description}</FeatureDescription>
-                  <div className='mt-4'>
-                    <h3 className='text-black dark:text-white font-semibold mb-2'>
+                  <div className='mt-6'>
+                    <h3 className='text-white font-semibold mb-4 text-lg'>
                       Technologies
                     </h3>
                     <div
-                      className='flex flex-wrap gap-4'
+                      className='flex flex-wrap gap-3'
                       role='list'
                       aria-label='Technologies used in this project'
                     >
@@ -184,12 +184,12 @@ export function FeaturesSectionDemo() {
                         return (
                           <div
                             key={skill.name}
-                            className='flex items-center gap-2 hover:scale-110 transition-transform duration-200'
+                            className='flex items-center gap-2 hover:scale-125 transition-all duration-300 p-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-white/20'
                             role='listitem'
                             title={skill.name}
                           >
                             <skill.icon
-                              className={cn(`text-4xl ${skill.color}`)}
+                              className={cn(`text-3xl ${skill.color}`)}
                               aria-label={`${skill.name} technology icon`}
                             />
                           </div>
@@ -215,15 +215,21 @@ const FeatureCard = ({
   className?: string;
 }) => {
   return (
-    <article className={cn(`sm:p-8 relative overflow-hidden`, className)}>
-      {children}
+    <article
+      className={cn(
+        `p-6 lg:p-8 relative overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 group`,
+        className
+      )}
+    >
+      <div className='absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+      <div className='relative z-10'>{children}</div>
     </article>
   );
 };
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <h2 className='max-w-5xl mx-auto text-left tracking-tight font-bold text-black dark:text-white text-xl md:text-3xl md:leading-snug'>
+    <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-4 group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-500'>
       {children}
     </h2>
   );
@@ -233,9 +239,9 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
   return (
     <p
       className={cn(
-        'text-sm md:text-base text-left mx-auto',
-        'text-white/95 font-normal dark:text-neutral-300',
-        'text-left mx-0 my-2'
+        'text-base md:text-lg leading-relaxed',
+        'text-white/80 font-light',
+        'mt-4 mb-6'
       )}
     >
       {children}
