@@ -1,20 +1,19 @@
 import Image, { StaticImageData } from 'next/image';
 
-interface AboutUniversityContainerProps {
+interface ExperienceContainerProps extends React.PropsWithChildren {
   image: StaticImageData;
   altText: string;
   title: string;
   date: string;
-  description: string[];
 }
 
-const AboutUniversityContainer = ({
+const ExperienceContainer = ({
   image,
   altText,
   title,
   date,
-  description,
-}: AboutUniversityContainerProps) => {
+  children,
+}: ExperienceContainerProps) => {
   return (
     <div className='space-y-4'>
       <div className='flex gap-4 mb-6'>
@@ -34,17 +33,10 @@ const AboutUniversityContainer = ({
         </div>
       </div>
       <div className='space-y-3'>
-        {description.map((desc, index) => (
-          <p
-            key={index}
-            className='text-white text-sm sm:text-base font-light leading-relaxed'
-          >
-            {desc}
-          </p>
-        ))}
+        <div className='mt-6 ml-6 space-y-6'>{children}</div>
       </div>
     </div>
   );
 };
 
-export default AboutUniversityContainer;
+export default ExperienceContainer;
