@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/ui/theme-provider';
 import { ModeToggle } from '@/components/ui/theme-toggle';
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import { FaBriefcase, FaCode, FaHome, FaUser } from 'react-icons/fa';
+import { FaBriefcase, FaCode, FaHome } from 'react-icons/fa';
 import './globals.css';
 
 const geistSans = Geist({
@@ -99,11 +99,6 @@ const navItems = [
     name: 'Home',
     link: '',
     icon: <FaHome />,
-  },
-  {
-    name: 'About',
-    link: 'about',
-    icon: <FaUser />,
   },
   {
     name: 'Experience',

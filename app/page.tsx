@@ -1,4 +1,3 @@
-import { About } from '@/components/About';
 import { Experience } from '@/components/Experience/Experience';
 import Hero from '@/components/Hero';
 import { FeaturesSectionDemo } from '@/components/Projects';
@@ -36,13 +35,6 @@ export default function Home() {
         className='min-h-screen flex flex-row justify-center items-center'
       >
         <Hero />
-      </section>
-
-      <section
-        id='about'
-        className='min-h-screen flex justify-center items-center py-20'
-      >
-        <About />
       </section>
 
       <section
