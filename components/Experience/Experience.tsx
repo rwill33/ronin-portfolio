@@ -7,7 +7,7 @@ import WesternLogo from '@/public/western-logo.png';
 import WDSLogo from '@/public/western_dev_society_logo.jpeg';
 import Image from 'next/image';
 import AboutUniversityContainer from '../ui/about-university-container';
-import { Timeline } from '../ui/timeline';
+import { StaticTimeline } from '../ui/static-timeline';
 import TopSkills from './TopSkills';
 
 export function Experience() {
@@ -145,29 +145,38 @@ export function Experience() {
     },
   ];
   return (
-    <div className='relative max-w-7xl mx-auto'>
+    <section
+      className='relative max-w-7xl mx-auto'
+      aria-labelledby='experience-heading'
+    >
       <div className='px-8'>
-        <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-white font-bold dark:text-white'>
-          Experience
-        </h2>
-        <p className='text-sm lg:text-base max-w-2xl my-4 text-white/95 font-normal dark:text-neutral-300'>
-          Here are a few of my past personal and professsional projects. I am
-          continuously working on new projects so feel free to contact me to see
-          what I am currently working on.
-        </p>
-      </div>
-      <div className='min-h-screen grid grid-cols-1 gap-4 xl:gap-16 xl:grid-cols-4 px-8 py-8'>
-        <div className='col-span-1 xl:col-span-3'>
-          <div className='pb-8'>
-            <Timeline data={data} />
+        <header className='text-center mb-16'>
+          <h1
+            id='experience-heading'
+            className='text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6'
+          >
+            Experience
+          </h1>
+          <p className='text-lg lg:text-xl max-w-3xl mx-auto text-white/90 font-light leading-relaxed'>
+            Here are my educational background, work experiences, and
+            extracurricular activities that have shaped my journey as a software
+            developer and business student.
+          </p>
+        </header>
+
+        <div className='relative'>
+          <div className='grid grid-cols-1 gap-8 xl:gap-16 xl:grid-cols-4'>
+            <div className='col-span-1 xl:col-span-3'>
+              <StaticTimeline data={data} />
+            </div>
+            <div className='col-span-1'>
+              <div className='bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 lg:p-8 hover:bg-white/15 hover:border-white/30 transition-all duration-500 sticky top-32 shadow-xl'>
+                <TopSkills />
+              </div>
+            </div>
           </div>
         </div>
-        <div className='col-span-1'>
-          <div className='pb-8'>
-            <TopSkills />
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   );
 }

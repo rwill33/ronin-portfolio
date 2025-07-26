@@ -138,7 +138,7 @@ export function FeaturesSectionDemo() {
 
   return (
     <section
-      className='relative max-w-7xl mx-auto py-16'
+      className='relative max-w-7xl mx-auto'
       aria-labelledby='projects-heading'
     >
       <div className='px-8'>

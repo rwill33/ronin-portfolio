@@ -16,33 +16,35 @@ const AboutUniversityContainer = ({
   description,
 }: AboutUniversityContainerProps) => {
   return (
-    <div>
-      <div className='flex gap-4 mb-4'>
-        <div className='hidden sm:block relative shrink-0 h-12 w-12 sm:w-24 sm:h-24 justify-self-start'>
+    <div className='space-y-4'>
+      <div className='flex gap-4 mb-6'>
+        <div className='hidden sm:block relative shrink-0 h-16 w-16 sm:w-20 sm:h-20'>
           <Image
             src={image}
             alt={altText}
             layout='fill'
-            className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
+            className='rounded-xl object-cover border border-white/20 shadow-lg'
           />
         </div>
         <div className='flex flex-col gap-2'>
-          <h3 className='col-span-2 text-lg sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100'>
+          <h3 className='text-xl sm:text-2xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent'>
             {title}
           </h3>
-          <p className=' font-bold text-neutral-800 dark:text-neutral-400 text-md'>
+          <p className='font-semibold text-white/80 text-sm sm:text-base'>
             {date}
           </p>
         </div>
       </div>
-      {description.map((desc, index) => (
-        <p
-          key={index}
-          className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-2'
-        >
-          {desc}
-        </p>
-      ))}
+      <div className='space-y-3'>
+        {description.map((desc, index) => (
+          <p
+            key={index}
+            className='text-white/90 text-sm sm:text-base font-light leading-relaxed'
+          >
+            {desc}
+          </p>
+        ))}
+      </div>
     </div>
   );
 };
