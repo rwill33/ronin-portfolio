@@ -52,7 +52,7 @@ export function Experience() {
             description={[
               'Python, OpenAI Models, Google Gemini',
               'Developed an LLM-powered pipeline to analyze 23K+ unstructured support chat logs, uncovering key customer pain points, analyzing emotional sentiment, and delivering actionable strategic insights',
-              'Built an embedding-based NLP pipeline to cluster 20M+ messy text entries into 30 clean categories, achieving 0.85 average similarity and improving search and analytics usability'
+              'Built an embedding-based NLP pipeline to cluster 20M+ messy text entries into 30 clean categories, achieving 0.85 average similarity and improving search and analytics usability',
             ]}
           />
           <div className='mt-8'>
@@ -70,16 +70,25 @@ export function Experience() {
             16 Month Internship (May 2023 - Aug 2024)
           </h5>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
-            Developed a full-stack web application for a fintech start-up, enabling a $100K pilot launch with a Big Five bank. Led a post-launch client engagement involving frequent client communication and the delivery of 30+ critical fixes.
+            Developed a full-stack web application for a fintech start-up,
+            enabling a $100K pilot launch with a Big Five bank. Led a
+            post-launch client engagement involving frequent client
+            communication and the delivery of 30+ critical fixes.
           </p>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
-            Designed and deployed a cloud-native application on AWS to support large-scale events, including a professional sports league (71M+ annual attendance) and a national live sports event (34K+ attendees).
+            Designed and deployed a cloud-native application on AWS to support
+            large-scale events, including a professional sports league (71M+
+            annual attendance) and a national live sports event (34K+
+            attendees).
           </p>
           <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8 mt-8'>
             4 Month Internship (May 2022 - Aug 2022)
           </h5>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
-            Built a modular React component library, reducing UI development time and complying with WCAG 2 standards. Developed automated deployment pipelines with caching, cutting release times down to under 5 minutes.
+            Built a modular React component library, reducing UI development
+            time and complying with WCAG 2 standards. Developed automated
+            deployment pipelines with caching, cutting release times down to
+            under 5 minutes.
           </p>
           <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
             I initially joined Intelliware as a Software Developer Intern during
@@ -145,8 +154,8 @@ export function Experience() {
             altText='ITC Logo'
             date='May 2025 - Present'
             description={[
-              'Defined the club\'s strategic vision and priorities to deliver meaningful programs for 200+ members',
-              'Overseeing operations across seven portfolios and 16 executives to ensure timely execution of club initiatives'
+              "Defined the club's strategic vision and priorities to deliver meaningful programs for 200+ members",
+              'Overseeing operations across seven portfolios and 16 executives to ensure timely execution of club initiatives',
             ]}
           />
           <AboutUniversityContainer
@@ -155,7 +164,7 @@ export function Experience() {
             altText='ITC Logo'
             date='Nov 2024 - Apr 2025'
             description={[
-              'Served as Section 6 communications lead, managing outreach and promoting club initiatives to over 75 students'
+              'Served as Section 6 communications lead, managing outreach and promoting club initiatives to over 75 students',
             ]}
           />
           <AboutUniversityContainer
