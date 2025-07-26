@@ -171,7 +171,7 @@ export default function RootLayout({
         >
           <AuroraBackground className='relative min-h-screen flex flex-col'>
             <FloatingNav navItems={navItems} />
-            <main className='flex flex-1 w-full justify-center pt-20'>
+            <main className='flex flex-1 w-full justify-center'>
               {children}
             </main>
             <div className='fixed bottom-4 right-4 z-50'>

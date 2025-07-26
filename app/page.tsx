@@ -39,14 +39,14 @@ export default function Home() {
 
       <section
         id='experience'
-        className='min-h-screen flex justify-center items-center py-20'
+        className='min-h-screen flex justify-center items-center py-20 pt-32'
       >
         <Experience />
       </section>
 
       <section
         id='projects'
-        className='min-h-screen flex justify-center items-center py-20'
+        className='min-h-screen flex justify-center items-center py-20 pt-32'
       >
         <FeaturesSectionDemo />
       </section>
