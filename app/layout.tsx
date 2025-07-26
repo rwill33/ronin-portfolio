@@ -2,6 +2,7 @@ import { AuroraBackground } from '@/components/ui/aurora-background';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import { ModeToggle } from '@/components/ui/theme-toggle';
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { FaBriefcase, FaCode, FaHome } from 'react-icons/fa';
@@ -298,6 +299,7 @@ export default function RootLayout({
             </div>
           </AuroraBackground>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
