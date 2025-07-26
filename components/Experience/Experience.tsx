@@ -49,10 +49,10 @@ export function Experience() {
             date='May 2022 - Aug 2022 & May 2023 - Aug 2024'
             description={[]}
           />
-          <h5 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-8'>
+          <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8'>
             4 Month Internship
           </h5>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
             I initially joined Intelliware as a Software Developer Intern during
             the summer of 2022. As part of a small team, I worked on developing
             enterprise software for a client in the real estate industry. I
@@ -62,7 +62,7 @@ export function Experience() {
             collaborating with team members to deliver high-quality software
             efficiently.
           </p>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
             Early on, I focused on building frontend screens and components, and
             later, I transitioned to working on the backend API. I adapted the
             Material UI component library and built out most of the frontend
@@ -73,7 +73,7 @@ export function Experience() {
             CRUD operations using GraphQL, streamlining data retrieval and
             updates.
           </p>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mt-8 mb-8'>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mt-8 mb-8'>
             Also joined the Ultimate Frisbee team!
           </p>
           <div className='grid grid-cols-2 gap-4 mb-8'>
@@ -92,10 +92,10 @@ export function Experience() {
               className='rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]'
             />
           </div>
-          <h5 className='text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-8'>
+          <h5 className='text-2xl font-bold text-white dark:text-neutral-100 mb-8'>
             16 Month Internship
           </h5>
-          <p className='text-neutral-800 dark:text-neutral-200 text-md font-normal mb-4'>
+          <p className='text-white/95 dark:text-neutral-200 text-md font-normal mb-4'>
             After completing my third year of software engineering, I decided to
             return to Intelliware for a 16-month internship. During this term, I
             worked on 2 main projects; a fintech application for a client
@@ -147,10 +147,10 @@ export function Experience() {
   return (
     <div className='relative max-w-7xl mx-auto'>
       <div className='px-8'>
-        <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'>
+        <h2 className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-white font-bold dark:text-white'>
           Experience
         </h2>
-        <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-800 font-normal dark:text-neutral-300'>
+        <p className='text-sm lg:text-base max-w-2xl my-4 text-white/95 font-normal dark:text-neutral-300'>
           Here are a few of my past personal and professsional projects. I am
           continuously working on new projects so feel free to contact me to see
           what I am currently working on.

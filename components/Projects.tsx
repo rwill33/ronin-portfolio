@@ -1,7 +1,7 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { skills } from '@/constants/skills';
+import { cn } from '@/lib/utils';
 import PhilanthPro from '@/public/philanthpro-dashboard.jpeg';
 import ProWire from '@/public/prowire-logo.png';
 import SpotifyClone from '@/public/spotify-screenshot.png';
@@ -145,11 +145,11 @@ export function FeaturesSectionDemo() {
         <header>
           <h1
             id='projects-heading'
-            className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'
+            className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-white font-bold dark:text-white'
           >
             Projects
           </h1>
-          <p className='text-sm lg:text-base max-w-2xl my-4 text-neutral-800 font-normal dark:text-neutral-300'>
+          <p className='text-sm lg:text-base max-w-2xl my-4 text-white/95 font-normal dark:text-neutral-300'>
             Here are a few of my past personal and professional projects.
             I&apos;m always building something new, so feel free to reach out to
             see what I&apos;m currently working on!
@@ -234,7 +234,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
     <p
       className={cn(
         'text-sm md:text-base text-left mx-auto',
-        'text-neutral-800 font-normal dark:text-neutral-300',
+        'text-white/95 font-normal dark:text-neutral-300',
         'text-left mx-0 my-2'
       )}
     >

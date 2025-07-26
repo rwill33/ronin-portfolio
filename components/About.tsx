@@ -8,7 +8,7 @@ export function About() {
       className='relative max-w-7xl mx-auto'
       aria-labelledby='about-heading'
     >
-      <div className='px-8'>
+      <div className='bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 shadow-2xl mx-4 px-8 py-12 dark:bg-black/20 dark:border-white/10'>
         <div className='grid gap-y-8 grid-cols-1 md:grid-cols-4'>
           <aside className='col-span-1'>
             <div className='flex flex-col items-center gap-4'>
@@ -24,10 +24,10 @@ export function About() {
               </div>
 
               <div className='flex flex-col items-center gap-2'>
-                <h2 className='text-2xl md:text-xl lg:text-2xl font-bold text-neutral-800 dark:text-neutral-100'>
+                <h2 className='text-2xl md:text-xl lg:text-2xl font-bold text-white dark:text-neutral-100'>
                   Ronin Williams-Young
                 </h2>
-                <address className='text-base text-neutral-600 dark:text-neutral-300 not-italic'>
+                <address className='text-base text-white/90 dark:text-neutral-300 not-italic'>
                   <p>Toronto, Ontario, Canada</p>
                   <p>
                     <a
@@ -79,28 +79,28 @@ export function About() {
             <header>
               <h1
                 id='about-heading'
-                className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-black font-bold dark:text-white'
+                className='text-4xl md:text-5xl lg:leading-tight mx-auto tracking-tight text-white font-bold dark:text-white'
               >
                 About Me
               </h1>
               <div
-                className='w-full border-t-2 border-neutral-900 dark:border-neutral-100 mb-8'
+                className='w-full border-t-2 border-white/80 dark:border-neutral-100 mb-8'
                 role='separator'
               />
             </header>
 
             <article className='prose prose-lg prose-neutral dark:prose-invert max-w-none'>
-              <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+              <p className='text-lg text-white/95 dark:text-neutral-200 mb-4'>
                 Hi, I&apos;m Ronin!
               </p>
-              <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+              <p className='text-lg text-white/95 dark:text-neutral-200 mb-4'>
                 I am currently in my 4th year of studies as a student in
                 Software Engineering and Ivey HBA at Western University.
                 I&apos;ve also had the chance to apply my skills during a
                 4-month and 16-month internship, where I worked on full-stack
                 development projects using tools like React, Java, SQL, and AWS.
               </p>
-              <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+              <p className='text-lg text-white/95 dark:text-neutral-200 mb-4'>
                 From a young age, I was captivated by the idea of building
                 things. Whether it was assembling LEGO sets without instructions
                 or tinkering with computers, I loved figuring out how things
@@ -111,7 +111,7 @@ export function About() {
                 pursue software engineering where I have learned to create
                 optimized, secure, and scalable solutions.
               </p>
-              <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+              <p className='text-lg text-white/95 dark:text-neutral-200 mb-4'>
                 Throughout my software development journey, I became
                 increasingly interested in the intersection of technology and
                 business, particularly how businesses can leverage technology to
@@ -122,7 +122,7 @@ export function About() {
                 and clear communication skills I am developing to create
                 solutions that bridge the gap between technology and business.
               </p>
-              <p className='text-lg text-neutral-800 dark:text-neutral-200 mb-4'>
+              <p className='text-lg text-white/95 dark:text-neutral-200 mb-4'>
                 Looking ahead, I&apos;m excited to build a career where I can
                 create innovative tools, systems, and strategies that help
                 organizations solve complex challenges and grow in a rapidly

@@ -20,7 +20,7 @@ export const FloatingNav = ({
   };
 
   return (
-    <div className='flex max-w-fit inset-x-0 my-6 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-zinc-900 bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 py-4  items-center justify-center space-x-4'>
+    <div className='flex max-w-fit inset-x-0 my-6 mx-auto border border-white/20 dark:border-white/[0.2] rounded-full bg-white/20 backdrop-blur-md dark:bg-zinc-900 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 py-4  items-center justify-center space-x-4'>
       {navItems.map(
         (
           navItem: {
@@ -34,7 +34,7 @@ export const FloatingNav = ({
             key={`nav-${idx}`}
             onClick={() => handleScroll(navItem.link)}
             className={cn(
-              'relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-900 dark:hover:text-neutral-300 hover:text-neutral-800 cursor-pointer'
+              'relative text-white dark:text-neutral-50 items-center flex space-x-1 hover:text-white/80 dark:hover:text-neutral-300 cursor-pointer transition-colors duration-200'
             )}
           >
             <span className='block sm:hidden text-2xl'>{navItem.icon}</span>
@@ -44,10 +44,10 @@ export const FloatingNav = ({
       )}
       <a
         href='mailto:ronin@williams-young.com'
-        className='border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full'
+        className='border text-sm font-medium relative border-white/30 dark:border-white/[0.2] text-white dark:text-white px-4 py-2 rounded-full hover:bg-white/10 transition-colors duration-200'
       >
         <span>Contact</span>
-        <span className='absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px' />
+        <span className='absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-300 to-transparent  h-px' />
       </a>
     </div>
   );
