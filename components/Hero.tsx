@@ -74,7 +74,7 @@ const Hero = () => {
                       className='p-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-full transition-all duration-200 hover:scale-110 backdrop-blur-sm'
                       aria-label="Visit Ronin's LinkedIn profile"
                     >
-                      <FaLinkedin className='text-xl text-blue-400' />
+                      <FaLinkedin className='text-xl text-blue-600 dark:text-blue-400' />
                     </a>
                     <a
                       href='https://github.com/rwill33'
