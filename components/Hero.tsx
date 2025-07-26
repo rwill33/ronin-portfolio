@@ -2,7 +2,6 @@
 import Headshot from '@/public/headshot-sketch.jpeg';
 import { motion } from 'motion/react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { TypewriterEffectSmooth } from './ui/typewriter-effect';
 
 const Hero = () => {
@@ -55,8 +54,12 @@ const Hero = () => {
         Aspiring Leader and Software Developer
       </p>
 
-      <Link
-        href={'/about'}
+      <button
+        onClick={() => {
+          document
+            .getElementById('about')
+            ?.scrollIntoView({ behavior: 'smooth' });
+        }}
         className='group relative inline-flex h-16 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 transition-all duration-300 hover:scale-105'
         aria-label='Learn more about Ronin Williams-Young'
       >
@@ -64,7 +67,7 @@ const Hero = () => {
         <span className='inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-10 py-1 text-md font-medium text-white backdrop-blur-3xl group-hover:bg-slate-900 transition-colors duration-300'>
           Learn More About Me
         </span>
-      </Link>
+      </button>
     </motion.section>
   );
 };
