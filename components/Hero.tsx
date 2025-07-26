@@ -1,5 +1,5 @@
 'use client';
-import Headshot from '@/public/headshot-sketch.jpeg';
+import Headshot from '@/public/sf_pic3.jpeg';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -89,35 +89,17 @@ const Hero = () => {
               {/* Main image with effects */}
               <div className='relative'>
                 <div className='absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-3xl'></div>
-                <div className='relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-8 shadow-2xl'>
-                  <div className='relative w-64 h-64 mx-auto'>
-                    <Image
-                      src={Headshot}
-                      fill
-                      alt='Professional headshot of Ronin Williams-Young'
-                      className='object-cover rounded-2xl'
-                      priority
-                      placeholder='blur'
-                      sizes='256px'
-                    />
-                    {/* Decorative elements */}
-                    <div className='absolute -top-4 -right-4 w-8 h-8 bg-blue-500 rounded-full opacity-80'></div>
-                    <div className='absolute -bottom-4 -left-4 w-6 h-6 bg-purple-500 rounded-full opacity-60'></div>
-                    <div className='absolute top-1/2 -right-8 w-4 h-4 bg-cyan-400 rounded-full opacity-70'></div>
-                  </div>
 
-                  {/* Floating cards */}
-                  <div className='absolute -top-6 -left-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 shadow-lg'>
-                    <div className='text-white text-sm font-medium'>
-                      Software Engineer
-                    </div>
-                  </div>
-
-                  <div className='absolute -bottom-6 -right-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3 shadow-lg'>
-                    <div className='text-white text-sm font-medium'>
-                      Business Student
-                    </div>
-                  </div>
+                <div className='relative w-64 h-64 mx-auto'>
+                  <Image
+                    src={Headshot}
+                    fill
+                    alt='Professional headshot of Ronin Williams-Young'
+                    className='object-cover rounded-2xl'
+                    priority
+                    placeholder='blur'
+                    sizes='256px'
+                  />
                 </div>
               </div>
 
@@ -136,14 +118,6 @@ const Hero = () => {
                     </a>
                   </p>
                 </div>
-              </div>
-
-              {/* Background pattern */}
-              <div className='absolute inset-0 -z-10'>
-                <div className='absolute top-20 left-10 w-32 h-32 border border-white/10 rounded-full'></div>
-                <div className='absolute bottom-20 right-10 w-24 h-24 border border-white/10 rounded-full'></div>
-                <div className='absolute top-1/2 left-1/4 w-2 h-2 bg-white/30 rounded-full'></div>
-                <div className='absolute top-1/3 right-1/3 w-1 h-1 bg-white/40 rounded-full'></div>
               </div>
             </div>
           </div>
