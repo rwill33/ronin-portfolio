@@ -1,3 +1,4 @@
+import BondBrandLoyaltyLogo from '@/public/bond_brand_loyalty_logo.jpeg';
 import IntelliwareLogo from '@/public/intelliware-logo.png';
 import AboutUniversityContainer from '../layout/ExperienceContainer';
 import Position from '../layout/Position';
@@ -17,7 +18,7 @@ const WorkExperience = () => {
         <div className='flex gap-8 flex-col'>
           <div>
             <AboutUniversityContainer
-              image={IntelliwareLogo}
+              image={BondBrandLoyaltyLogo}
               title='Bond Brand Loyalty — Toronto, ON'
               altText='Bond Brand Loyalty Logo'
               date='May 2025 – Present'
