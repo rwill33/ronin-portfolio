@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: 'https://williams-young.com',
     images: [
       {
-        url: '/sf_pic3.jpeg',
+        url: '/sf_pic4.jpeg',
         width: 1200,
         height: 630,
         alt: 'Ronin Williams-Young - AI Engineer and Full-Stack Developer Portfolio',

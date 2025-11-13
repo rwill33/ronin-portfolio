@@ -85,7 +85,7 @@ export const metadata: Metadata = {
       'AI Engineer at Bond Brand Loyalty and Software Engineering student at Western University. Expert in React, TypeScript, Python, AI/ML, and enterprise software development.',
     images: [
       {
-        url: '/sf_pic3.jpeg',
+        url: '/sf_pic4.jpeg',
         width: 1200,
         height: 630,
         alt: 'Ronin Williams-Young - AI Engineer and Full-Stack Developer',
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
     title: 'Ronin Williams-Young | AI Engineer & Full-Stack Developer',
     description:
       'AI Engineer at Bond Brand Loyalty and Software Engineering student at Western University. Expert in React, TypeScript, Python, AI/ML, and enterprise software development.',
-    images: ['/sf_pic3.jpeg'],
+    images: ['/sf_pic4.jpeg'],
   },
   robots: {
     index: true,
@@ -146,11 +146,11 @@ export default function RootLayout({
         <link rel='icon' href='/favicon.ico' sizes='16x16 32x32' />
         <link
           rel='icon'
-          href='/sf_pic3.jpeg'
+          href='/sf_pic4.jpeg'
           sizes='192x192'
           type='image/jpeg'
         />
-        <link rel='apple-touch-icon' href='/sf_pic3.jpeg' />
+        <link rel='apple-touch-icon' href='/sf_pic4.jpeg' />
         <meta name='theme-color' content='#0a0a0a' />
         <meta name='color-scheme' content='dark' />
         <meta name='format-detection' content='telephone=no' />

@@ -1,5 +1,5 @@
 'use client';
-import Headshot from '@/public/sf_pic3.jpeg';
+import Headshot from '@/public/sf_pic4.jpeg';
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';

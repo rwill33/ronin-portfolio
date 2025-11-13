@@ -17,12 +17,12 @@ export default function manifest(): MetadataRoute.Manifest {
         type: 'image/x-icon',
       },
       {
-        src: '/sf_pic3.jpeg',
+        src: '/sf_pic4.jpeg',
         sizes: '192x192',
         type: 'image/jpeg',
       },
       {
-        src: '/sf_pic3.jpeg',
+        src: '/sf_pic4.jpeg',
         sizes: '512x512',
         type: 'image/jpeg',
       },
